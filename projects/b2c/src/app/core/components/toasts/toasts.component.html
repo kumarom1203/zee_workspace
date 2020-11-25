@@ -1,0 +1,20 @@
+<!-- <p>toasts works!</p> -->
+<div *ngIf="show">
+    <div class="ErrDiv" [ngClass]="{minHeight:alerts.length}">
+        <div id="errToastr" *ngFor="let alert of alerts" class="alert alert-{{alert.type}}">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 pr-4">
+                    <span (click)="hide(alert)" class="c_pointer close" aria-label="Close">
+                        &times;
+                    </span>
+                </div>
+                <div class="col-md-12 col-sm-10 pl-4 pb-3">
+                    <i class={{alert.icon}}></i>&nbsp; <span [innerHTML]="alert.text" ></span>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert> -->

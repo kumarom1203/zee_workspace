@@ -1,0 +1,12 @@
+<!-- <p>form-error-alert works!</p> -->
+<ng-container *ngIf="showOrHide">
+    <div class="mb-0 text-center {{alert.class}}" role="alert">
+        <ng-container *ngIf="alert.title">
+            <h4  class="alert-heading" [innerHTML]="alert.title"> </h4>
+            <hr>
+        </ng-container>
+        <strong [innerHTML]="alert.msg">
+            <!-- {{alert.msg}} -->
+        </strong>
+    </div>
+</ng-container>

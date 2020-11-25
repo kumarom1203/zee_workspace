@@ -1,0 +1,78 @@
+<!-- <p>registration works!</p> -->
+<form [formGroup]="regForm" (ngSubmit)="onRegistration()"  autocomplete="off" method="post" id="register_user_form">
+    <div class="rowput">
+        <app-form-error-alert></app-form-error-alert>
+    </div>
+    <div class="rowput has-feedback hide"><i class="fal fa-user-alt"></i>
+      <input formControlName="first_name" type="text" class="validate_user_register form-control logpadding" placeholder="First Name" name="first_name">
+      <div class="text-left f-12">
+         <small class="text-danger" *ngIf="hasError('first_name','required')">*First Name is
+             required</small>
+         <small class="text-danger" *ngIf="hasError('first_name','maxlength')">*Maximum characters
+             exceeded</small>
+       </div> 
+    </div>
+    <div class="rowput has-feedback hide"><i class="fal fa-user-alt"></i>
+       <input formControlName="last_name" type="text" class="validate_user_register form-control logpadding"  placeholder="Last Name" name="Last_name">
+       <div class="text-left f-12">
+         <small class="text-danger" *ngIf="hasError('last_name','required')">*Last Name is
+             required</small>
+         <small class="text-danger" *ngIf="hasError('last_name','maxlength')">*Maximum characters
+             exceeded</small>
+       </div>
+    </div>
+    <div class="rowput has-feedback"><i class="fal fa-envelope"></i>
+       <input formControlName="email" type="email" class="validate_user_register form-control logpadding" placeholder="Email-Id" value="" name="email">
+       <div class="text-left f-12">
+         <small class="text-danger" *ngIf="hasError('email','required')">*Email is
+             required</small>
+         <small class="text-danger" *ngIf="hasError('email','email')">*Email not valid</small>
+         <small class="text-danger" *ngIf="hasError('email','maxlength')">*Maximum characters
+             exceeded</small>
+       </div>
+    </div>
+    <div class="rowput has-feedback"><i class="fal fa-lock"></i>
+         <input formControlName="password" type="password" class="validate_user_register form-control logpadding" placeholder="New Password" value="" name="password">
+         <div class="text-danger text-left f-12">
+            <small class="" *ngIf="hasError('password','required')">*Password is
+                required</small>
+            <small class="" *ngIf="hasError('password','minlength')">*Minimum 8 characters
+               required</small>
+            <small class="" *ngIf="hasError('password','maxlength')">*Maximum characters
+                  exceeded</small>
+          </div>
+    </div>
+    <div class="rowput has-feedback"><i class="fal fa-lock"></i>
+       <input formControlName="confirm_password" (keyup)="isPasswordMatched()" type="password" class="validate_user_register form-control logpadding" placeholder="Retype Password" value="" name="confirm_password">
+       <div class="f-12 text-danger">
+         <small *ngIf="isMatched">*Must match with password </small>
+       </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row_submit">
+       <div class="col-xs-12 nopad">
+          <div class="agree_terms">
+             <div class="remberbox">
+                <div class="squaredThree">
+                   <input formControlName="email_subscription" type="checkbox" id="register_tc" class="airlinecheckbox validate_user_register" name="tc">
+                   <label for="register_tc" class="register_tc"></label>
+                </div>
+                <label class="lbllbl custom-control-label" for="register_tc">Email me the exclusive deals from Zee – You can Unsubscribe any time with just a click</label>
+             </div>
+          </div>
+       </div>
+       <div class="col-xs-12 nopad">
+          <button class="submitlogin" id="register_user_button">
+          <span class="submitlogin-wrapper">
+          <span class="submitlogin-text">Register</span>
+          </span>
+          <span class="submitlogin-bgrnd-wrapper">
+          <span class="submitlogin-idle" style="background-color: #000"></span>
+          <span class="submitlogin-hover" style="background-color: #fff"></span>
+          </span>
+          </button>
+       </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="dntacnt">I already have an Account <a class="hand-cursor open_sign_in">Login Here</a> </div>
+ </form>

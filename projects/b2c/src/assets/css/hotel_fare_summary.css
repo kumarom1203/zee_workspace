@@ -1,0 +1,162 @@
+.rit_summery {
+    float: right;
+}
+
+.sticky-sidebar-css { position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */ } 
+
+.insiefare {
+    display: block;
+    margin: 14px 0 0;
+    overflow: hidden;
+}
+/*.is-affixed .insiefare { position: fixed !important;
+    top: 20px;
+   
+    width: 350px; }*/
+
+.farehd {
+        color: #000;
+    display: block;
+    font-size: 18px;
+    margin: 0 0 7px;
+    font-weight: 600;
+    line-height: normal;
+    overflow: hidden;
+}
+
+.fredivs {
+    background: #fffdfd none repeat scroll 0 0;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 2px 0 #ccc;
+    display: block;
+    overflow: hidden;
+    padding: 13px;
+}
+
+.kindrest {
+    display: block;
+    margin: 0px 0 5px; padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.freshd {
+    color: #0027ff;
+    display: block;
+    font-size: 14px;
+    margin: 0 0 0px;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.reptallt {
+    border-bottom: 1px solid #eee;
+    margin: 0px 0 0px 0px;
+    overflow: hidden; padding:3px 9px;
+    font-size: 13px;
+}
+
+.reptallt:nth-child(even) { background: #fff; }
+.reptallt:nth-child(odd) { background: #ebebeb; }
+
+
+.faresty {
+    color: #000000;
+    display: block;
+    overflow: hidden;
+    padding: 4px 0px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.amnter {
+    color: #000;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 0px;
+}
+
+.reptalltftr {
+    overflow: hidden;
+}
+
+.farestybig {
+    color: #000;
+    display: block;
+    font-size: 16px;
+    line-height: 28px; font-weight: 500;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.amnterbig {
+    color: #0027ff;
+    display: block;
+    font-size: 20px; font-weight: 500;
+    overflow: hidden;
+    text-align: right;
+}
+
+.promo_section {
+    display: table;
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: #fffdfd none repeat scroll 0 0;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 2px 0 #ccc;
+}
+
+.lostcart {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    float: left;
+    font-size: inherit;
+    margin-bottom: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.promo_title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.promo_input {
+    display: block;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.promo_input .promocode {
+    padding: 5px 10px;
+    border-radius: 0px;
+    border: 1px solid #cccccc;
+    display: block;
+    font-size: 14px;
+    height: 50px;
+    overflow: hidden;
+    color: #333;
+    width: 100%;
+}
+
+.promosubmit {
+    background: #000 none repeat scroll 0 0;
+    border: 1px solid #000;
+    border-radius: 0px;
+    color: #ffffff;
+    display: table;
+    height: 50px;
+    margin: 0 auto;
+    padding: 7px;
+    margin: 10px 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}

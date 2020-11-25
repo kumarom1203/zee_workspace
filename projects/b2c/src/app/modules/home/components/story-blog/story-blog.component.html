@@ -1,0 +1,386 @@
+<!-- <p>story-blog works!</p> -->
+<div class="clearfix"></div>
+<div class="blog_city" style="padding-bottom:95px !important; background: #fff;">
+    <div class="col-12 nopad">
+        <div class="title_story">
+            <div class="container">
+                <div class="row animatedParent">
+                    <div class="qodef-st-inner animated bounceInLeft fadeInLeftShort">
+                        <span class="qodef-st-subtitle">
+                            Discover the city
+                        </span>
+                        <h1 class="qodef-st-title">
+                            STORIES WORTH READING
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="grid_section_blog">
+            <div class="gridblog">
+                <div class="col-12 nopad">
+                    <div class="container nopad storygrid">
+                        <div class="row">
+                            <div class="grid-item-blog grid-item-blog-height2">
+                                <a id="clickrecommendslide">
+                                    <div class="blogsec">
+                                        <div class="blogimage">
+                                            <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-blog-post-1-650x484.jpg"> -->
+                                            <img [src]="getUrl(googleStories[0])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-blog-post-1-650x484.jpg'" alt="">
+                                        </div>
+                                        <div class="boxes_blog">
+                                            <h2>SIGHTS AND ATTRACTIONS YOU CAN’T MISS SIGHTS AND ATTRACTIONS YOU CAN’T MISS</h2>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!--  <span class="postdate"><i class="far fa-calendar"></i> May 11,2019</span> <span class="postcomment"><i class="far fa-comment"></i> 0 Comments</span> -->
+                            </div>
+                            <div class="grid-item-blog grid-item-blog-height2">
+                                <div class="blogsec">
+                                    <div class="blogimage">
+                                        <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-blog-post-2-650x484.jpg"> -->
+                                        <img [src]="getUrl(googleStories[1])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-blog-post-2-650x484.jpg'" alt="">
+                                    </div>
+                                    <div class="boxes_blog">
+                                        <h2>BEAUTIFUL AIRBNBS TO CONSIDER FOR YOUR TRIP BEAUTIFUL AIRBNBS TO CONSIDER FOR YOUR TRIP</h2>
+                                        <!-- <span class="postdate"><i class="far fa-calendar"></i> May 11,2019</span> <span class="postcomment"><i class="far fa-comment"></i> 0 Comments</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item-blog grid-item-blog-height2">
+                                <div class="blogsec">
+                                    <div class="blogimage">
+                                        <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-blog-post-3-650x484.jpg"> -->
+                                        <img [src]="getUrl(googleStories[2])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-blog-post-3-650x484.jpg'" alt="">
+                                    </div>
+                                    <div class="boxes_blog">
+                                        <h2>FIND THE BEST BUDGET HOTELS, HOSTELS & AIRBNBS FIND THE BEST BUDGET HOTELS, HOSTELS & AIRBNBS</h2>
+                                        <!-- <span class="postdate"><i class="far fa-calendar"></i> May 11,2019</span> <span class="postcomment"><i class="far fa-comment"></i> 0 Comments</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="backblog backsection">
+                    <img src="assets/images/back-png.png"> Back
+                </a>
+                <div class="recommendslide" id="showrecommendslide">
+                    <div class="container nopad">
+                        <div class="rowslide">
+                            <div class="prw_rup">
+                                <div class="valign-wrapper">
+                                    <!-- <a class="backblog"><i class="fas fa-chevron-left"></i>Back</a> -->
+                                    <div class="owl-carousel owl-theme" id="recommends">
+                                        <div class="itemwrap">
+                                            <div class="slideitem">
+                                                <div class="topone">
+                                                    <div class="inspd2 effect-lexi">
+                                                        <div class="imgeht2">
+                                                            <div class="dealimg">
+                                                                <img class="lazy lazy_loader" src="https://media-cdn.tripadvisor.com/media/photo-s/0e/79/15/af/tulemar-bungalows-villas.jpg">
+                                                                <h4 class="deal_price">
+                                                                    <span>Starting at</span>
+                                                                    <strong> $</strong> 188
+                                                                </h4>
+                                                                <div class="wishlist_section">
+                                                                    <i class="far fa-heart wishlist wishlist--outline"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="absint2 absintcol1 ">
+                                                                <div class="absinn">
+                                                                    <div class="smilebig2">
+                                                                        <h3>SIGHTS AND ATTRACTIONS</h3>
+                                                                        <h4>Manuel Antonio, Costa Rica</h4>
+                                                                    </div>
+                                                                    <div class="deal_txt">
+                                                                        <img class="star_rat" src="assets/images/star_rating_black.png" alt="">
+                                                                        <span class="reviw">1,507 Reviews</span>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="itemwrap">
+                                            <div class="slideitem">
+                                                <div class="topone">
+                                                    <div class="inspd2 effect-lexi">
+                                                        <div class="imgeht2">
+                                                            <div class="dealimg">
+                                                                <img class="lazy lazy_loader" src="https://media-cdn.tripadvisor.com/media/photo-s/11/13/bc/1c/belvedere-hotel-your.jpg">
+                                                                <h4 class="deal_price">
+                                                                    <span>Starting at</span>
+                                                                    <strong> $</strong> 188
+                                                                </h4>
+                                                                <div class="wishlist_section">
+                                                                    <i class="far fa-heart wishlist wishlist--outline"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="absint2 absintcol1 ">
+                                                                <div class="absinn">
+                                                                    <div class="smilebig2">
+                                                                        <h3>SIGHTS AND ATTRACTIONS</h3>
+                                                                        <h4>Riccione, Italy</h4>
+                                                                    </div>
+                                                                    <div class="deal_txt">
+                                                                        <img class="star_rat" src="assets/images/star_rating_black.png" alt="">
+                                                                        <span class="reviw">1,100 Reviews</span>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="itemwrap">
+                                            <div class="slideitem">
+                                                <div class="topone">
+                                                    <div class="inspd2 effect-lexi">
+                                                        <div class="imgeht2">
+                                                            <div class="dealimg">
+                                                                <img class="lazy lazy_loader" src="https://media-cdn.tripadvisor.com/media/photo-w/12/e6/00/37/french-quarter-inn.jpg">
+                                                                <h4 class="deal_price">
+                                                                    <span>Starting at</span>
+                                                                    <strong> $</strong> 188
+                                                                </h4>
+                                                                <div class="wishlist_section">
+                                                                    <i class="far fa-heart wishlist wishlist--outline"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="absint2 absintcol1 ">
+                                                                <div class="absinn">
+                                                                    <div class="smilebig2">
+                                                                        <h3>SIGHTS AND ATTRACTIONS</h3>
+                                                                        <h4>Charleston, South Carolina</h4>
+                                                                    </div>
+                                                                    <div class="deal_txt">
+                                                                        <img class="star_rat" src="assets/images/star_rating_black.png" alt="">
+                                                                        <span class="reviw">507 Reviews</span>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="itemwrap">
+                                            <div class="slideitem">
+                                                <div class="topone">
+                                                    <div class="inspd2 effect-lexi">
+                                                        <div class="imgeht2">
+                                                            <div class="dealimg">
+                                                                <img class="lazy lazy_loader" src="https://media-cdn.tripadvisor.com/media/photo-s/0e/04/39/3f/luxury-double-room.jpg">
+                                                                <h4 class="deal_price">
+                                                                    <span>Starting at</span>
+                                                                    <strong> $</strong> 188
+                                                                </h4>
+                                                                <div class="wishlist_section">
+                                                                    <i class="far fa-heart wishlist wishlist--outline"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="absint2 absintcol1 ">
+                                                                <div class="absinn">
+                                                                    <div class="smilebig2">
+                                                                        <h3>SIGHTS AND ATTRACTIONS</h3>
+                                                                        <h4>Siem Reap, Cambodia</h4>
+                                                                    </div>
+                                                                    <div class="deal_txt">
+                                                                        <img class="star_rat" src="assets/images/star_rating_black.png" alt="">
+                                                                        <span class="reviw">1,289 Reviews</span>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="itemwrap">
+                                            <div class="slideitem">
+                                                <div class="topone">
+                                                    <div class="inspd2 effect-lexi">
+                                                        <div class="imgeht2">
+                                                            <div class="dealimg">
+                                                                <img class="lazy lazy_loader" src="https://media-cdn.tripadvisor.com/media/photo-s/01/8e/e6/39/the-oberoi-rajvilas-jaipur.jpg">
+                                                                <h4 class="deal_price">
+                                                                    <span>Starting at</span>
+                                                                    <strong> $</strong> 188
+                                                                </h4>
+                                                                <div class="wishlist_section">
+                                                                    <i class="far fa-heart wishlist wishlist--outline"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="absint2 absintcol1 ">
+                                                                <div class="absinn">
+                                                                    <div class="smilebig2">
+                                                                        <h3>SIGHTS AND ATTRACTIONS</h3>
+                                                                        <h4>Jaipur, India</h4>
+                                                                    </div>
+                                                                    <div class="deal_txt">
+                                                                        <img class="star_rat" src="assets/images/star_rating_black.png" alt="">
+                                                                        <span class="reviw">1,507 Reviews</span>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="itemwrap">
+                                            <div class="slideitem">
+                                                <div class="topone">
+                                                    <div class="inspd2 effect-lexi">
+                                                        <div class="imgeht2">
+                                                            <div class="dealimg">
+                                                                <img class="lazy lazy_loader" src="https://media-cdn.tripadvisor.com/media/photo-p/0f/6f/ff/70/conservatory-master-suite.jpg">
+                                                                <h4 class="deal_price">
+                                                                    <span>Starting at</span>
+                                                                    <strong> $</strong> 188
+                                                                </h4>
+                                                                <div class="wishlist_section">
+                                                                    <i class="far fa-heart wishlist wishlist--outline"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="absint2 absintcol1 ">
+                                                                <div class="absinn">
+                                                                    <div class="smilebig2">
+                                                                        <h3>SIGHTS AND ATTRACTIONS</h3>
+                                                                        <h4>London, United Kingdom</h4>
+                                                                    </div>
+                                                                    <div class="deal_txt">
+                                                                        <img class="star_rat" src="assets/images/star_rating_black.png" alt="">
+                                                                        <span class="reviw">807 Reviews</span>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="itemwrap">
+                                            <div class="slideitem">
+                                                <div class="topone">
+                                                    <div class="inspd2 effect-lexi">
+                                                        <div class="imgeht2">
+                                                            <div class="dealimg">
+                                                                <img class="lazy lazy_loader" src="https://media-cdn.tripadvisor.com/media/photo-s/11/ad/c6/ad/rosewood-mayakoba.jpg">
+                                                                <h4 class="deal_price">
+                                                                    <span>Starting at</span>
+                                                                    <strong> $</strong> 188
+                                                                </h4>
+                                                                <div class="wishlist_section">
+                                                                    <i class="far fa-heart wishlist wishlist--outline"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="absint2 absintcol1 ">
+                                                                <div class="absinn">
+                                                                    <div class="smilebig2">
+                                                                        <h3>SIGHTS AND ATTRACTIONS</h3>
+                                                                        <h4>Playa del Carmen, Mexico</h4>
+                                                                    </div>
+                                                                    <div class="deal_txt">
+                                                                        <img class="star_rat" src="assets/images/star_rating_black.png" alt="">
+                                                                        <span class="reviw">1,507 Reviews</span>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="gridblog">
+                <div class="col-12 nopad">
+                    <a class="backblog backnews">
+                        <img src="assets/images/back-png.png"> Back
+                    </a>
+                    <div class="container nopad storyqoutes">
+                        <div class="row">
+                            <div class="grid-item-blog">
+                                <a id="clickrecommendsnews">
+                                    <div class="boxes_blog boxes_blogbg">
+                                        <h2>Explore and tell the world the glories of our amazing journey. Explore and tell the world the glories of our</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid-item-blog">
+                                <div class="boxes_blog boxes_blogbg1">
+                                    <h2>BERGAMO: AN ARCHITECTURAL TOUR OF ATTRACTION YOU LOVE. BERGAMO:</h2>
+                                </div>
+                            </div>
+                            <div class="grid-item-blog">
+                                <div class="boxes_blog boxes_blogbg">
+                                    <h2>I GET IDEAS ABOUT WHAT’S ESSENTIAL WHEN PACKING MY SUITCASE. I GET IDEAS ABOUT WHAT’S ESSENTIAL WHEN PACKING MY SUITCASE.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="storyslide">
+                        <div class="container nopad">
+                            <div class="row">
+                                <div class="prw_rup">
+                                    <div class="owl-carousel owl-theme" id="recommendsnews">
+                                        <div class="grid-item-blog">
+                                            <div class="boxes_blog boxes_blogbg">
+                                                <h2>Explore and tell the world the glories of our amazing journey. Explore and tell the world the glories of our</h2>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item-blog">
+                                            <div class="boxes_blog boxes_blogbg1">
+                                                <h2>BERGAMO: AN ARCHITECTURAL TOUR OF ATTRACTION YOU LOVE. BERGAMO: AN ARCHITECTURAL TOUR OF ATTRACTION YOU LOVE.</h2>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item-blog">
+                                            <div class="boxes_blog boxes_blogbg">
+                                                <h2>Explore and tell the world the glories of our amazing journey. Explore and tell the world the glories of our amazing journey.</h2>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item-blog">
+                                            <div class="boxes_blog boxes_blogbg">
+                                                <h2>Explore and tell the world the glories of our amazing journey. Explore and tell the world the glories of our</h2>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item-blog">
+                                            <div class="boxes_blog boxes_blogbg1">
+                                                <h2>Explore and tell the world the glories of our amazing journey. Explore and tell the world the glories of our amazing journey.</h2>
+                                            </div>
+                                        </div>
+                                        <div class="grid-item-blog">
+                                            <div class="boxes_blog boxes_blogbg">
+                                                <h2>Explore and tell the world the glories of our amazing journey. Explore and tell the world the glories of our amazing journey.</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>

@@ -1,0 +1,68 @@
+<!-- <p>login works!</p> -->
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()" role="form" id="login" name="login">
+    <div class="rowput">
+       <app-form-error-alert></app-form-error-alert>
+    </div> 
+    <div class="rowput"> <i class="fal fa-envelope"></i>
+        <input formControlName="email" type="email" data-content="Username Ex: john@gmail.com" data-trigger="hover focus" data-placement="bottom" data-original-title="Here To Help" data-toggle="popover" data-container="body" id="email" class="email form-control logpadding" placeholder="Email" required="required" name="email">
+        <div class="text-left f-12">
+          <small class="text-danger" *ngIf="hasError('email','required')">*Email is
+              required</small>
+          <small class="text-danger" *ngIf="hasError('email','email')">*Email not valid</small>
+          <small class="text-danger" *ngIf="hasError('email','maxlength')">*Maximum characters
+              exceeded</small>
+        </div>
+     </div>
+     <div class="rowput"> <i class="fal fa-lock"></i>
+        <input formControlName="password" type="password" id="password" class="password form-control logpadding" placeholder="Password" required="required" name="password" value="">
+        <div class="text-left">
+          <small class="text-danger" *ngIf="hasError('password','required')">*Password is
+              required</small>
+          <small class="text-danger" *ngIf="hasError('password','minlength')">*Minimum 8
+              characters
+              required</small>
+          <small class="text-danger" *ngIf="hasError('password','maxlength')">*Maximum
+              characters exceeded</small>
+      </div>
+     </div>
+     <div class="clearfix"></div>
+     <div id="login-status-wrapper" class="alert alert-danger" style="display: none">
+        <p> <i class="fa fa-warning"></i> 
+        </p>
+     </div>
+     <div class="clearfix"></div>
+     <div id="login_auth_loading_image" style="display: none">
+        <div class="text-center loader-image">
+           <!-- <img src="/extras/system/template_list/template_v3/images/loader_v3.gif" alt="please wait"> -->
+        </div>
+     </div>
+     <div class="clearfix"></div>
+     <div class="misclog">
+        <!--   <div class="custom-control custom-checkbox remberbox">
+           <input type="checkbox" class="custom-control-input" id="remember">
+           <label class="custom-control-label" for="remember"></label>
+           </div> -->
+        <div class="remberbox">
+           <div class="squaredThree">
+              <input formControlName="remember" type="checkbox" id="remember" class="airlinecheckbox validate_user_register" name="tc">
+              <label for="remember" class="register_tc"></label>
+           </div>
+           <label class="lbllbl custom-control-label" for="remember">Remember me</label>
+        </div>
+        <a class="hand-cursor forgtpsw forgot_pasword" id="forgot-password">Forgot Password? </a> 
+     </div>
+     <div class="clearfix"></div>
+     <div class="clearfix"></div>
+     <button class="submitlogin" id="login_submit">
+     <span class="submitlogin-wrapper">
+     <span class="submitlogin-text">Login</span>
+     </span>
+     <span class="submitlogin-bgrnd-wrapper">
+     <span class="submitlogin-idle" style="background-color: #000"></span>
+     <span class="submitlogin-hover" style="background-color: #fff"></span>
+     </span>
+     </button>
+     <div class="clear"></div>
+     <div class="dntacnt">No account yet? <a class="hand-cursor open_register">Create Account</a> 
+     </div>
+  </form>

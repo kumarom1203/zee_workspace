@@ -1,0 +1,30 @@
+{
+    "/Antripx/*": {
+        "target": "http://3.7.156.89",
+        "secure": false,
+        "pathRewrite": {
+            "^/Antripx": "Antripx"
+        },
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/sa/*": {
+        "target": "http://54.98.46.240:4002/sa",
+        "secure": false,
+        "pathRewrite": {
+            "^/sa": "sa"
+        },
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/b2c/*": {
+        "target": "http://54.98.46.240:4004",
+        "secure": false,
+        "pathRewrite": {
+            "^/b2c": "b2c"
+        },
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+
+}

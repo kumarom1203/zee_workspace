@@ -1,0 +1,378 @@
+<!-- <p>search-form works!</p> -->
+<div class="grid-section-wrapper">
+    <div class="container nopad">
+        <div class="col-12">
+            <div class="wpb_wrapper_form">
+                <div class="placement_wrap_cell">
+                    <div class="searchbox_container">
+                        <form class="search_form_index" action="">
+                            <div class="col-12 nopad searchshutter">
+                                <input
+                                    type="search"
+                                    autocomplete="off"
+                                    id="search_box"
+                                    autocorrect="off"
+                                    required=""
+                                    name="location"
+                                    class="input_form_box"
+                                    placeholder="Where to?"
+                                    title="Search"
+                                    aria-label="Search"
+                                    value=""
+                                    #search_box
+                                >
+                                <span class="submitlogin-bgrnd-wrapper">
+                                    <span class="submitlogin-idle" style="background-color: #fff"></span>
+                                    <span class="submitlogin-hover" style="background:transparent;"></span>
+                                </span>
+                                <button
+                                    type="submit"
+                                    class="sbmt_btn"
+                                    title="Search"
+                                    aria-label="Search"
+                                >
+                                    <span class="fal fa-search"></span>
+                                </button>
+                                <span class="searchsbmt_speak">
+                                    <a id="rec" class="btn btn-raised btn-default mobbtn dropdown-toggle" data-toggle="dropdown">
+                                        <img src="assets/images/mike.png" alt="">
+                                    </a>
+                                    <div class="dropdown-menu speak_bar_box">
+                                        <div class="speak_static_text">Please say something like this</div>
+                                        <div class="bot-text-speak">
+                                            <span id="chat-dialog-queue-span" style="opacity: 1;">
+                                                <i>“</i> Flight for 2 adults from Delhi to Mumbai
+                                                <i>”</i>
+                                            </span>
+                                        </div>
+                                        <div class="" id="mikewave">
+                                            <div class="sound-icon">
+                                                <div class="mike-wave">
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                    <i class="barr"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="show_data_list show_data_list_main">
+                                <button type="button" class="nearbybutton">
+                                    <div class="nearicon">
+                                        <span class="nerimg">
+                                            <img src="assets/images/pointer.png">
+                                        </span>
+                                    </div>
+                                    <div class="near_text">Nearby</div>
+                                </button>
+                                <ul class="nearautocompletelist">
+                                    <li>
+                                        <a href="">
+                                            <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                            <strong>Chicago</strong> United States
+                                            <span class="smalltype">610 Properties</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                            Freehand
+                                            <strong>Chicago</strong>
+                                            <span class="smalltype">3 Properties</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="quicklinks-header" style="padding: 9px; margin: 0px;">Recently Viewed</div>
+                                <ul class="nearautocompletelist">
+                                    <ng-container *ngFor="let city of cities; let i=index;" >
+                                        <li (click)="changedCity(city)">
+                                            <a href="javascript:void(0);">
+                                                <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                                <strong> {{city?.city}} </strong>
+                                                <span class="smalltype">{{city?.city}} - {{city?.state}}, {{city?.country}}</span>
+                                            </a>
+                                        </li>
+                                    </ng-container>
+                                    <!-- <li>
+                                        <a href="">
+                                            <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                            <strong>Chicago</strong> Union Station
+                                            <span class="smalltype">Train Station - Illinos, USA</span>
+                                        </a>
+                                    </li> -->
+                                </ul>
+                                <div class="clearfix"></div>
+                                <ul class="autocompletelist">
+                                    <li>
+                                        <a href="">
+                                            <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                            <strong>Chicago</strong>
+                                            <span class="smalltype">City - Metropolitan Area, USA</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                            <strong>Chicago</strong> Union Station
+                                            <span class="smalltype">Train Station - Illinos, USA</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                            <strong>Chicago</strong> (ORD - O'Hare International Airport)
+                                            <span class="smalltype">Airport - Illinos, USA</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="recimg" style="background-image: url(&quot;https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/fd/79/caption.jpg?w=100&amp;h=-1&amp;s=1&quot;);"></div>
+                                            <strong>Chicago</strong> Union Station
+                                            <span class="smalltype">Hotel - Busan, South KoreA</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="col-12">
+                                    <div class="quicklinks-header">EXPLORE ZEEBUSINESS</div>
+                                    <div class="quickthings">
+                                        <a class="quicks" href="">Hotels</a>
+                                        <a class="quicks" href="">Flights</a>
+                                        <a class="quicks" href="">Cars</a>
+                                        <a class="quicks" href="">Restaurants</a>
+                                        <a class="quicks" href="">Activities</a>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-12" style="margin-bottom: 10px;">
+                                    <div class="quicklinks-header"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                        <span class="search_map">
+                            <a href="" data-toggle="modal" data-target="#mapModal">Search by Map
+                                <i class="fal fa-map"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="tabs_wrapper">
+        <div class="container">
+            <div class="tabs_section">
+                <a class="tabslink" href="">
+                    <span class="fal fa-bed"></span> Hotels
+                </a>
+                <a class="tabslink" href="">
+                    <span class="fal fa-plane"></span> Flights
+                </a>
+                <a class="tabslink" href="">
+                    <span class="fal fa-car"></span> Cars
+                </a>
+                <a class="tabslink" href="">
+                    <span class="fal fa-utensils"></span> Restaurants
+                </a>
+                <a class="tabslink" href="">
+                    <span class="fal fa-snowboarding"></span> Activities
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="backdrop"></div>
+<div
+    class="modal fade mapplugin"
+    id="mapModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="map_container">
+                    <div class="mapbackground">
+                        <div class="row">
+                            <div class="col-md-4 nopad">
+                                <ul class="list-unstyled nav nav-tabs" id="map-other" role="tablist">
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            id="asia-tab"
+                                            data-toggle="tab"
+                                            href="#asia"
+                                            role="tab"
+                                            aria-controls="asia"
+                                            aria-selected="true"
+                                        >
+                                            <span class="world-sm">
+                                                <img src="assets/images/asia.png">
+                                            </span>
+                                            Asia
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            id="africa-tab"
+                                            data-toggle="tab"
+                                            href="#africa"
+                                            role="tab"
+                                            aria-controls="africa"
+                                            aria-selected="false"
+                                        >
+                                            <span class="world-sm">
+                                                <img src="assets/images/africa.png">
+                                            </span>
+                                            Africa
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            id="australia-tab"
+                                            data-toggle="tab"
+                                            href="#australia"
+                                            role="tab"
+                                            aria-controls="australia"
+                                            aria-selected="false"
+                                        >
+                                            <span class="world-sm">
+                                                <img src="assets/images/australia.png">
+                                            </span>
+                                            Australia
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link active"
+                                            id="north-tab"
+                                            data-toggle="tab"
+                                            href="#north"
+                                            role="tab"
+                                            aria-controls="north"
+                                            aria-selected="false"
+                                        >
+                                            <span class="us-sm active">
+                                                <img src="assets/images/northamerica.png">
+                                            </span>
+                                            North America
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            id="south-tab"
+                                            data-toggle="tab"
+                                            href="#south"
+                                            role="tab"
+                                            aria-controls="south"
+                                            aria-selected="false"
+                                        >
+                                            <span class="eu-sm">
+                                                <img src="assets/images/south-america.png">
+                                            </span>
+                                            South America
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            id="europe-tab"
+                                            data-toggle="tab"
+                                            href="#europe"
+                                            role="tab"
+                                            aria-controls="europe"
+                                            aria-selected="false"
+                                        >
+                                            <span class="world-sm">
+                                                <img src="assets/images/europe.png">
+                                            </span>
+                                            Europe
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 text-right" style="border-left: 1px solid #ccc;">
+                                <div class="tab-content" id="myTabContent">
+                                    <div
+                                        class="tab-pane fade"
+                                        id="asia"
+                                        role="tabpanel"
+                                        aria-labelledby="asia-tab"
+                                    >
+                                        <img src="assets/images/india.svg">
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="africa"
+                                        role="tabpanel"
+                                        aria-labelledby="africa-tab"
+                                    >
+                                        <img src="assets/images/africa.svg">
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="australia"
+                                        role="tabpanel"
+                                        aria-labelledby="australia-tab"
+                                    >
+                                        <img src="assets/images/australia.svg">
+                                    </div>
+                                    <div
+                                        class="tab-pane fade show active"
+                                        id="north"
+                                        role="tabpanel"
+                                        aria-labelledby="north-tab"
+                                    >
+                                        <div class="mapsvgs" id="mapsvg"></div>
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="south"
+                                        role="tabpanel"
+                                        aria-labelledby="south-tab"
+                                    >
+                                        <img src="assets/images/brazil.svg">
+                                    </div>
+                                    <div
+                                        class="tab-pane fade"
+                                        id="europe"
+                                        role="tabpanel"
+                                        aria-labelledby="europe-tab"
+                                    >
+                                        <img src="assets/images/uk.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

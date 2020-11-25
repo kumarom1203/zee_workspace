@@ -1,0 +1,18 @@
+https://kgsearch.googleapis.com/v1/entities:search?query=chicago+riverwalk&key=AIzaSyBTPwWAm_0E6k4eWqPV30PqhxYsmx-iAA8&limit=1&indent=True
+
+To get all the reviews form google....
+https://developers.google.com/my-business/content/review-data#list_all_reviews
+https://developers.google.com/my-business/reference/rest/v4/accounts.locations.reviews
+
+Google My Business API
+https://developers.google.com/my-business/content/prereqs?authuser=5#try-out
+
+
+Google Business Form:
+https://docs.google.com/forms/d/e/1FAIpQLSfC_FKSWzbSae_5rOpgwFeIUzXUF1JCQnlsZM_gC1I2UHjA3w/viewform
+
+
+https://en.wikipedia.org/w/api.php?action=opensearch&search=rainbow&format=json
+
+
+https://dev.to/vishesh/custom-error-handling-in-angular-reactive-forms-5f05

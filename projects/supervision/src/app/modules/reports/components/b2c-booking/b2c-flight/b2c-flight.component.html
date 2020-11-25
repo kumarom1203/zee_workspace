@@ -1,0 +1,42 @@
+<!-- <p>agents works!</p> -->
+<div class="card">
+    <div class="card-body">
+        <ngb-tabset class="tabs-animated tabs-animated-shadow" (tabChange)="beforeChange($event)">
+            <ngb-tab *ngFor="let link of navLinks; let i=index;">
+                <ng-template ngbTabTitle>
+                    <span (click)="onSelect(link, i)"> <i class="{{link.icon}}"></i> &nbsp; {{link.label}} </span>
+                </ng-template>
+                <ng-template ngbTabContent>
+                    <div class="">
+                        <div class="">
+                            <div [ngSwitch]="link.report">
+                                <div *ngSwitchCase="'Bus'"> {{link.report}}
+                                    <app-dynamic-table [data]="tabsData.Bus"></app-dynamic-table>
+                                </div>
+                                <div *ngSwitchCase="'Flight'">
+                                    <app-flight-booking></app-flight-booking>
+                                    <!-- <app-dynamic-table [data]=" tabsData.Flight "></app-dynamic-table> -->
+                                </div>
+                                <div *ngSwitchCase="'Hotel'"> {{link.report}}
+                                    <app-dynamic-table [data]=" tabsData.Hotel "></app-dynamic-table>
+                                </div>
+                                <div *ngSwitchCase="'Transfers'"> {{link.report}}
+                                    <app-dynamic-table [data]=" tabsData.Transfers "></app-dynamic-table>
+                                </div>
+                                <div *ngSwitchCase="'Activities'"> {{link.report}}
+                                    <app-dynamic-table [data]=" tabsData.Activities "></app-dynamic-table>
+                                </div>
+                                <div *ngSwitchCase="'Packages'"> {{link.report}}
+                                    <h4>
+                                        No data found...
+                                    </h4>
+                                    <!-- <app-dynamic-table [data]=" tabsData.Packages" ></app-dynamic-table> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div>
+</div>

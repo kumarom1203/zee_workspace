@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <!-- Navbar -->
+    <app-header></app-header>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <app-side-bar></app-side-bar>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <div class="row mx-1 py-3">
+            <div class="col-12 col-md-12">
+                <div [@architectUIAnimation]="o.isActivated ? o.activatedRoute : ''">
+                    <router-outlet #o="outlet"></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
+
+
+    <!-- Main Footer -->
+    <app-footer></app-footer>
+    <!-- /.main-footer -->
+
+</div>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+
+<!-- <ngx-loading-bar [color]="'var(--primary)'"></ngx-loading-bar> -->

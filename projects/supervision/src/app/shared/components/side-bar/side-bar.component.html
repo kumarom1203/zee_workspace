@@ -1,0 +1,935 @@
+<!-- <p>side-bar works!</p> -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a routerLink="/" class="brand-link">
+        <img src="assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="javascript:void(0);" class="d-block">{{currentUser.first_name}} {{currentUser.last_name}}</a>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
+                <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+                <li class="nav-item has-treeview" [class.menu-open]="extraParameter == 'dashboardsMenus'">
+                    <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p class="text-uppercase">
+                            Dashboard
+                            <!-- <i class="right fas fa-angle-left"></i> -->
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item has-treeview" [class.menu-open]="extraParameter == 'manageMasterDataMenus'">
+                    <a class="nav-link" [ngClass]="{'active': extraParameter == 'manageMasterDataMenus'}" (click)="extraParameter = 'manageMasterDataMenus'">
+                        <i class="nav-icon fas fa-list-alt"></i>
+                        <p class="text-uppercase">
+                            Manage Master Data
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/master-data/branch-list" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Branch List </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/master-data/staff-grp-list" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Staff List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview" [class.menu-open]="extraParameter == 'usersMenus'">
+                    <a class="nav-link" [ngClass]="{'active': extraParameter == 'usersMenus'}" (click)="extraParameter = 'usersMenus'">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p class="text-uppercase">
+                            User Management
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item has-treeview" [class.menu-open]="firstChildData?.group == 'b2b'">
+                            <a href="javascript:void(0);" class="nav-link" (click)="firstChildData['group'] = 'b2b'">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    Agent
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" [style.display]="firstChildData?.group == 'b2b' ? 'block' : 'none'">
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/b2b-active', 1]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/b2b-inactive', 0]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>In-Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/b2b-logged-in']" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Logged-In</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview" [class.menu-open]="firstChildData?.group == 'staff'">
+                            <a href="javascript:void(0);" class="nav-link" (click)="firstChildData['group'] = 'staff'">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    Staff Users
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" [style.display]="firstChildData?.group == 'staff' ? 'block' : 'none'">
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/staff-active', 1]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/staff-inactive', 0]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>In-Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/staff-logged-in']" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Logged-In</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview" [class.menu-open]="firstChildData?.group == 'b2c'">
+                            <a href="javascript:void(0);" class="nav-link"(click)="firstChildData['group'] = 'b2c'">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    B2C Users
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" [style.display]="firstChildData?.group == 'b2c' ? 'block' : 'none'">
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/b2c-active', 1]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/b2c-inactive', 0]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>In-Active</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview" [class.menu-open]="firstChildData?.group == 'sub-agent'">
+                            <a href="javascript:void(0);" class="nav-link" (click)="firstChildData['group'] = 'sub-agent'">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    Sub Agent
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" [style.display]="firstChildData?.group == 'sub-agent' ? 'block' : 'none'">
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/sub-agent-active', 1]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/sub-agent-inactive', 0]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>In-Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/sub-agent-logged-in']" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Logged-In</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview" [class.menu-open]="firstChildData?.group == 'supplier'">
+                            <a href="javascript:void(0);" class="nav-link" (click)="firstChildData['group'] = 'supplier'">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    Suppliers
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" [style.display]="firstChildData?.group == 'supplier' ? 'block' : 'none'">
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/supplier-active', 1]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/supplier-inactive', 0]" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>In-Active</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/users/supplier-logged-in']" routerLinkActive="active" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Logged-In</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- <ul class="nav nav-treeview">
+                        
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        
+                    </ul> -->
+                </li>
+
+                <li class="nav-item has-treeview" [class.menu-open]="extraParameter == 'reportsMenus'">
+                    <a class="nav-link" [ngClass]="{'active': extraParameter == 'reportsMenus'}" (click)="extraParameter = 'reportsMenus'">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p class="text-uppercase">
+                            Reports
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item has-treeview" [class.menu-open]="firstChildData?.group == 'b2c'">
+                            <a href="javascript:void(0);" class="nav-link" (click)="firstChildData['group'] = 'b2c'">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>B2C Booking</p>
+                                <i class="right fas fa-angle-left"></i>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/b2c-flight']" routerLinkActive="active" class="nav-link">
+                                        <i class="fas fa-plane nav-icon"></i>
+                                        <p>Flight</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/b2c-hotel']" routerLinkActive="active" class="nav-link">
+                                        <i class="fas fa-bed nav-icon"></i>
+                                        <p>Hotel</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/b2c-car']" routerLinkActive="active" class="nav-link">
+                                        <i class="fas fa-car nav-icon"></i>
+                                        <p>Car</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/b2c-activities']" routerLinkActive="active" class="nav-link">
+                                        <i class="fa fa-binoculars nav-icon"></i>
+                                        <p>Activity</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview" [class.menu-open]="firstChildData?.group == 'b2b'">
+                            <a href="javascript:void(0);" class="nav-link" (click)="firstChildData['group'] = 'b2b'">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Agents Booking</p>
+                                <i class="right fas fa-angle-left"></i>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/agent-flight']" routerLinkActive="active" class="nav-link">
+                                        <i class="fas fa-plane nav-icon"></i>
+                                        <p>Flight</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/agent-hotel']" routerLinkActive="active" class="nav-link">
+                                        <i class="fas fa-bed nav-icon"></i>
+                                        <p>Hotel</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/agent-car']" routerLinkActive="active" class="nav-link">
+                                        <i class="fas fa-car nav-icon"></i>
+                                        <p>Car</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="['/reports/agent-activities']" routerLinkActive="active" class="nav-link">
+                                        <i class="fa fa-binoculars nav-icon"></i>
+                                        <p>Activity</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/reports/transaction-logs" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Trasaction Logs </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/reports/search-history" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Search History </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview" [class.menu-open]="extraParameter == 'hotelCrsMenus'">
+                    <a class="nav-link" [ngClass]="{'active': extraParameter == 'hotelCrsMenus'}" (click)="extraParameter = 'hotelCrsMenus'">
+                        <i class="nav-icon fas fa-bed"></i>
+                        <p class="text-uppercase">
+                            Hotel CRS
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a routerLinkActive="active" [routerLink]="['/hotels/hotel-crs-list']" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Hotel List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" [routerLink]="['/hotels/hotel-types']" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Hotel Type </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" [routerLink]="['/hotels/room-types']" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Room Type </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" [routerLink]="['/hotels/hotel-amenities']" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Hotel Amenities </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" [routerLink]="['/hotels/room-amenities']" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Room Amenities </p>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview" [class.menu-open]="extraParameter == 'settingsMenus'">
+                    <a class="nav-link" [ngClass]="{'active': extraParameter == 'settingsMenus'}" (click)="extraParameter = 'settingsMenus'">
+                        <i class="nav-icon fas fa-cog"></i>
+                        <p class="text-uppercase">
+                            Settings
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/convenience-fees" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Payment Gateway Fees </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/promocode" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Promocode </p>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/manage-api" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Manage API </p>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/currency-conversion" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Currency Conversion </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/event-logs" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Error Event Logs </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/social-networks" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Social Networks </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/social-login" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Social Login </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/domain-log" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Domain Logo </p>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/live-events" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Live Events </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/airport-management" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Airport Management </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLinkActive="active" routerLink="/settings/crear-cache" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Clear Cache On Server </p>
+                            </a>
+                        </li> -->
+
+                    </ul>
+                </li>
+
+                <!-- <li class="nav-item">
+                    <a href="pages/widgets.html" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Widgets
+                            <span class="right badge badge-danger">New</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Layout Options
+                            <i class="fas fa-angle-left right"></i>
+                            <span class="badge badge-info right">6</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/layout/top-nav.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Top Navigation</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Top Navigation + Sidebar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/layout/boxed.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Boxed</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Fixed Sidebar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Fixed Navbar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Fixed Footer</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Collapsed Sidebar</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p>
+                            Charts
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/charts/chartjs.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>ChartJS</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/charts/flot.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Flot</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/charts/inline.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Inline</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon fas fa-tree"></i>
+                        <p>
+                            UI Elements
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/UI/general.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>General</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/icons.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Icons</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/buttons.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Buttons</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/sliders.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Sliders</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/modals.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Modals & Alerts</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/navbar.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Navbar & Tabs</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/timeline.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Timeline</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/ribbons.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Ribbons</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            Forms
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/forms/general.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>General Elements</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/forms/advanced.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Advanced Elements</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/forms/editors.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Editors</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/forms/validation.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Validation</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                            Tables
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/tables/simple.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Simple Tables</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/tables/data.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>DataTables</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/tables/jsgrid.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>jsGrid</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-header">EXAMPLES</li>
+                <li class="nav-item">
+                    <a href="pages/calendar.html" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p>
+                            Calendar
+                            <span class="badge badge-info right">2</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/gallery.html" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Gallery
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon far fa-envelope"></i>
+                        <p>
+                            Mailbox
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/mailbox/mailbox.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Inbox</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/compose.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Compose</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Read</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Pages
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/examples/invoice.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Invoice</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/profile.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Profile</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/e-commerce.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>E-commerce</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/projects.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Projects</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/project-add.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Project Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/project-edit.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Project Edit</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/project-detail.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Project Detail</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/contacts.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Contacts</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon far fa-plus-square"></i>
+                        <p>
+                            Extras
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Login</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/register.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Register</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/forgot-password.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Forgot Password</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/recover-password.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Recover Password</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/lockscreen.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Lockscreen</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/legacy-user-menu.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Legacy User Menu</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/language-menu.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Language Menu</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/404.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Error 404</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/500.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Error 500</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/pace.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Pace</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/blank.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Blank Page</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="starter.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Starter Page</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-header">MISCELLANEOUS</li>
+                <li class="nav-item">
+                    <a href="https://adminlte.io/docs/3.0" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>Documentation</p>
+                    </a>
+                </li>
+                <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="fas fa-circle nav-icon"></i>
+                        <p>Level 1</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon fas fa-circle"></i>
+                        <p>
+                            Level 1
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Level 2</p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>
+                                    Level 2
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="javascript:void(0);" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Level 3</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0);" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Level 3</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0);" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Level 3</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Level 2</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="fas fa-circle nav-icon"></i>
+                        <p>Level 1</p>
+                    </a>
+                </li>
+                <li class="nav-header">LABELS</li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon far fa-circle text-danger"></i>
+                        <p class="text">Important</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon far fa-circle text-warning"></i>
+                        <p>Warning</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link">
+                        <i class="nav-icon far fa-circle text-info"></i>
+                        <p>Informational</p>
+                    </a>
+                </li> -->
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

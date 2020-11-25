@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/base";
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+.c-pointer {
+    cursor: pointer !important;
+}
+
+.custom-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbottom {
+    border-bottom: 1px solid rgba(26, 54, 126, 0.125);
+}
+
+.f-12 {
+    font-size: 12px !important;
+}
+
+.f-14 {
+    font-size: 14px !important;
+}
+
+.f-16 {
+    font-size: 16px !important;
+}
+
+.f-18 {
+    font-size: 18px !important;
+}
+
+.f-20 {
+    font-size: 20px !important;
+}
+
+.mat-error {
+    color: red !important;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+// a:hover {
+//     color: #ffffff;
+// }
+.nav-pills .nav-link:hover {
+    color: #ffffff !important;
+}

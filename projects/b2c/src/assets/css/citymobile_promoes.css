@@ -1,0 +1,125 @@
+.top-info a{
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.top-info {
+    border: solid 3px black;
+    padding: 10px 8px;
+    margin-bottom: 10px;
+}
+.pop-header h4{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    margin:15px 0;
+}
+.popup-row{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.ssppp{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.popcol:first-child{
+    width:40%;
+    justify-content: space-between;
+}
+.popcol:last-child{
+    width:52%;
+    justify-content: space-between;
+}
+
+.popcol{
+    width:55%;
+}
+.popcol.ssppp img.qr{
+    width:145px !important;
+    height:145px !important;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.popcol.ssppp .or_mob{
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background: #6c6b6b;
+    display: table;
+    margin: auto;
+}
+.popcol.ssppp .or_mob .or{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background: #f7f6f6;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #000;
+    border-radius: 50%;
+    margin: auto;
+    left: -14px;
+    right: 0px;
+    z-index: 9999;}
+.mobilenoo::placeholder {
+    color: #000;
+    font-weight: 500 !important;
+}
+.popcol input{
+    width:100%;
+    border-radius:0 !important;
+    
+}
+.applandrod{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-top: 15px;
+}
+.applandrod img:first-child{
+    margin-right: 10px;
+}
+.applandrod img{
+    width:80px !important;
+}
+.qr-row{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.city_details .modal-body {
+        /*padding: 40px 30px !important;*/
+}
+.top-info i{
+    margin-left: 10px;
+    color:royalblue;
+}
+
+.city-map-btns .top-info a:hover {
+    background: transparent;
+    color: #000;
+    border: 0;
+    border-radius: 0px !important;
+}
+.popbody{
+    padding:40px 40px;
+}

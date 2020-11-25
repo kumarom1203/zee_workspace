@@ -1,0 +1,31 @@
+<!-- <p>branch-list works!</p> -->
+<div class="card mb-3">
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>
+            {{'Branch List'}}
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+            <thead>
+                <tr class="p-2">
+                    <th class="text-left text-nowrap" *ngFor="let header of displayedColumns;">
+                        {{header}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="p-2" *ngFor="let user of branchListData; let i=index;">
+                    <td class="text-left text-muted"># {{i+1}}</td>
+                    <td class="text-left"> {{user['Branch_Name']}} </td>
+                    <td class="text-left" *ngIf="user['Action']">
+                        <button class="btn btn-sm btn-warning m-1" (click)="openDialog(1, user)">Edit</button>
+                        <button class="btn btn-sm btn-danger" (click)="onDelete(user, i)">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

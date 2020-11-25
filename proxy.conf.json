@@ -1,0 +1,11 @@
+{
+    "/sa/*": {
+        "target": "http://54.98.46.240:4002",
+        "secure": false,
+        "pathRewrite": {
+            "^/sa": "sa"
+        },
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

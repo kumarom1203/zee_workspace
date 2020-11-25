@@ -1,0 +1,53 @@
+#errToastr {
+  visibility: visible;
+  border-radius: 4px;
+  padding: 6px;
+  z-index: 1;
+  opacity: 1;
+  animation: fade 8s ease-in-out;
+  -webkit-animation: fade 8s ease-in-out;
+}
+
+#errToastr.hidden {
+  visibility: hidden;
+}
+.minHeight {
+  min-height: 1px;
+}
+.ErrDiv {
+  position: fixed;
+  left: 20px;
+  bottom: 5px;
+  width: auto;
+  max-width: 400px;
+  max-height: 60%;
+  z-index: 1050;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    left: -400px;
+  }
+  10% {
+    opacity: 1;
+    left: 0px;
+  }
+  100% {
+    opacity: 0;
+    // left: -400px;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+    left: -400px;
+  }
+  10% {
+    opacity: 1;
+    left: 1%;
+  }
+  100% {
+    opacity: 1;
+    left: -400px;
+  }
+}

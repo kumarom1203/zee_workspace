@@ -1,0 +1,21 @@
+.client_brand { background: #f6f6f6;  padding: 0px 5px 0px 5px; }
+
+.client_item {
+    display: flex;
+    align-items: center; overflow: hidden;
+    justify-content: center;
+}
+
+.client_item img {
+    width: 100% !important; height: 160px;
+    /*opacity: 0.5;*/
+        -webkit-transition: -webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+    -moz-transition: -moz-transform .5s cubic-bezier(.215,.61,.355,1);
+    transition: transform .5s cubic-bezier(.215,.61,.355,1); cursor: pointer;
+}
+.client_item img:hover {     -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    transform: scale(1.06);}
+
+#clienticon .owl-stage { display: block;
+    margin: auto; }

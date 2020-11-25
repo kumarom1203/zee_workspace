@@ -1,0 +1,159 @@
+
+.booking-container .payment_div {
+    position: relative;
+    margin-top: -220px; 
+    z-index: 101;
+}
+
+.booking-container {
+    
+    padding: 1.5rem 0 2.5rem; background-color: #fff;
+}
+
+.payment_process {
+    display: block;
+    margin: 30px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.payment_process::after {
+    background: #fff none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left:12%;
+    position: absolute;
+    right: 12%;
+    top: 9px;
+}
+
+.center_pro {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.center_labl {
+    color: #fff;
+    display: block;
+    font-size: 17px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.fabols {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    display: block;
+    height: 20px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    position: relative;
+    width: 20px;
+    z-index: 10;
+}
+
+.center_pro.active .fabols {
+    background: #4169e1;
+}
+
+.checkcontent {
+    color: #666666;
+    display: block;
+    padding-right: 30px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.payrowsubmt {
+    float: left;
+    padding: 20px 0;
+    width: 100%;
+}
+
+
+.paysubmit {
+   height: 42px;
+    background: #000;
+    /* box-shadow: 1px 1px 3px 0px #c8c6c6; */
+    border: 2px solid #000;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    font-weight: 500;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: .5px;
+    padding: 0 40px;
+    border-radius: 0px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+.paysubmit .bookbtn-bgrnd-wrapper>span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: -webkit-transform .3s cubic-bezier(.215,.61,.355,1);
+    -moz-transition: -moz-transform .3s cubic-bezier(.215,.61,.355,1);
+    transition: transform .3s cubic-bezier(.215,.61,.355,1); 
+}
+
+.paysubmit .bookbtn-wrapper {
+    position: relative;
+    display: inline-block;
+    z-index: 20;
+}
+
+.paysubmit .bookbtn-idle {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+
+/*.baggage-details-cta-wrapper .baggage-details-cta-text { z-index: 99; position: relative; }
+*/
+.paysubmit:hover .bookbtn-idle{-webkit-transform:scaleX(0);-moz-transform:scaleX(0);transform:scaleX(0)}
+
+.paysubmit:hover .bookbtn-wrapper{ z-index: 20; position: relative; 
+    -webkit-animation:TextToRight .65s cubic-bezier(.215,.61,.355,1) 30ms forwards;   
+     -moz-animation:TextToRight .65s cubic-bezier(.215,.61,.355,1) 30ms forwards;
+     animation:TextToRight .65s cubic-bezier(.215,.61,.355,1) 30ms forwards;
+ }
+
+.paysubmit:hover .bookbtn-wrapper .bookbtn-text { color: #000; }
+
+.paysubmit .bookbtn-hover {
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    z-index: 10;
+}
+.paysubmit:hover .bookbtn-hover, .paysubmit:hover .bookbtn-hover{-webkit-transform:scaleX(1);-moz-transform:scaleX(1);transform:scaleX(1); 
+     }

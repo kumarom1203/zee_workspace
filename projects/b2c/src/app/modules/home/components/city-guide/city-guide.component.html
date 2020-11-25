@@ -1,0 +1,237 @@
+<!-- <p>city-guide works!</p> -->
+<div class="clearfix"></div>
+<div class="inspired_city">
+    <div class="col-12 nopad">
+        <div class="container">
+            <div class="row animatedParent">
+                <div class="qodef-st-inner animated bounceInLeft fadeInLeftShort" style="padding: 50px 0px 85px 0px;">
+                    <span class="qodef-st-subtitle">
+                        Experience the buzz
+                    </span>
+                    <h1 class="qodef-st-title">
+                        A complete city
+                        <br>guide to Dubai
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="grid city_guide">
+            <div class="grid-item pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-14-300x300.jpg"> -->
+                    <img [src]="getUrl(googleCities[0])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-14-300x300.jpg'">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{googleCities[0]?.name || 'Street Art' }}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item grid-item--height2 grid-item--width2 pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-20-650x650.jpg"> -->
+                    <img [src]="getUrl(googleCities[1])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-20-650x650.jpg'" alt="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    {{ googleCities[1]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-21-300x300.jpg"> -->
+                    <img [src]="getUrl(googleCities[2])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-21-300x300.jpg'" alt="" srcset="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[2]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-9-300x300.jpg"> -->
+                    <img [src]="getUrl(googleCities[3])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-9-300x300.jpg'" alt="" srcset="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[3]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-22-300x300.jpg"> -->
+                    <img [src]="getUrl(googleCities[4])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-22-300x300.jpg'" alt="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[4]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item grid-item--height2 pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-23-150x300.jpg"> -->
+                    <img [src]="getUrl(googleCities[5])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-23-150x300.jpg'" alt="" srcset="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[5]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item grid-item--width2">
+                <div class="grid-details">
+                    <img src="assets/images/thecity.jpg">
+                    <div class="boxes_content">
+                        <h2>INSPIRED BY THE CITY</h2>
+                        <div id="content3" class="scrollbar style-1">
+                            <p>Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline.Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline.</p>
+                        </div>
+                        <a
+                            class="weatherwidget-io"
+                            href="https://forecast7.com/en/25d2055d27/dubai/"
+                            data-mode="Current"
+                            data-theme="pure"
+                        ></a>
+                        <div class="time_widget">
+                            <div class="timedisplay">
+                                <i class="far fa-clock"></i>
+                                <span class="times">05:45
+                                    <span>Local Time</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item grid-item--height2 pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-25-150x300.jpg"> -->
+                    <img [src]="getUrl(googleCities[6])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-25-150x300.jpg'" alt="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[6]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item grid-item--width2 pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-17.jpg"> -->
+                    <img [src]="getUrl(googleCities[7])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-17.jpg'" alt="" srcset="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[7]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-8.jpg"> -->
+                    <img [src]="getUrl(googleCities[8])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-8.jpg'" alt="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[8]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item pointerhand">
+                <div class="grid-details">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-12-150x150.jpg"> -->
+                    <img [src]="getUrl(googleCities[9])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/05/port-img-12-150x150.jpg'" alt="">
+                    <div class="qodef-pli-text-holder">
+                        <div class="qodef-pli-text-wrapper">
+                            <div class="qodef-pli-text">
+                                <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                    <!-- Street Art -->
+                                    {{ googleCities[9]?.name || 'Street Art'}}
+                                </h3>
+                                <div class="qodef-pli-category-holder">
+                                    <a itemprop="url" class="qodef-pli-category" href="#">Exploring</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="view_more d-none">View More</a>
+    </div>
+</div>

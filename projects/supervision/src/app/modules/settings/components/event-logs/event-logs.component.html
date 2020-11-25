@@ -1,0 +1,55 @@
+<!-- <p>event-logs works!</p> -->
+<div class="card mb-3">
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>
+            {{ 'Error Events Logs' }}
+        </div>
+    </div>
+    <form>
+        <div class="p-2 customBorder">
+            <div class="form-group form-inline mb-0">
+                Full text search:
+                <input class="form-control ml-2" type="text" name="searchTerm"
+                    (keyup)="applyFilter($event.target.value)" />
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-borderless table-striped table-hover" matSort (matSortChange)="sortData($event)">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-nowrap" *ngFor="let header of displayColumn;"
+                            mat-sort-header="{{header.key}}">
+                            {{header.value }} </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="p-2" *ngFor="let data of respData | slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize; let i=index;">
+                        <td class="text-left text-muted"># {{ i + 1}}</td>
+                        <td class="text-left text-nowrap"> {{data['referenceID']}} </td>
+                        <td class="text-left"> {{data['moduleName']}} </td>
+                        <td class="text-left"> {{data['operation']}} </td>
+                        <td class="text-left"> {{data['message']}} </td>
+                        <td class="text-left text-nowrap font-weight-bold" [innerHTML]="data['browserAndOperatingSystemInfo']"> </td>
+                        <td class="text-center text-nowrap"> {{data['ip']}} </td>
+                        <td class="text-left text-nowrap"> {{data['occuredOn']}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer pb-0">
+            <div class="d-flex w-100 justify-content-between">
+                <ngb-pagination [collectionSize]="collectionSize" [(page)]="page"
+                    [pageSize]="pageSize">
+                </ngb-pagination>
+                <select class="custom-select" style="width: auto" name="pageSize"
+                    [(ngModel)]="pageSize">
+                    <option [ngValue]="2">2 items per page</option>
+                    <option [ngValue]="4">4 items per page</option>
+                    <option [ngValue]="6">6 items per page</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>

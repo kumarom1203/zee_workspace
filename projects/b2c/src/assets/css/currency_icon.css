@@ -1,0 +1,42 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 16/05/2020 02:41
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../icons_font/currency.eot");
+  src: url("../icons_font/currency.eot?#iefix") format("embedded-opentype"),
+       url("../icons_font/currency.woff2") format("woff2"),
+       url("../icons_font/currency.woff") format("woff"),
+       url("../icons_font/currency.ttf") format("truetype"),
+       url("../icons_font/currency.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-signs:before { content: "\f100"; }
+.flaticon-commerce:before { content: "\f101"; }
+.flaticon-sign:before { content: "\f102"; }
+.flaticon-money:before { content: "\f103"; }
+.flaticon-dollar:before { content: "\f104"; }
+.flaticon-signs-1:before { content: "\f105"; }
+.flaticon-money-1:before { content: "\f106"; }
+.flaticon-sign-2:before { content: "\f107"; }
+.flaticon-sign-3:before { content: "\f108"; }
+.flaticon-sign-4:before { content: "\f109"; }

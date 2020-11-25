@@ -1,0 +1,225 @@
+.inspired_city { padding: 50px 0px 50px 0px; }
+
+.qodef-st-subtitle {
+    font-size: 24px;
+    color: #3c3c3c;
+    padding-left: 59px;
+    position: relative; font-weight: 400;
+}
+
+.qodef-st-title {
+    margin: 14px 0 15px;
+    display: block;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 61px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.weatherwidget-io { width: 221px; float: right; margin-top: 4px; }
+
+.time_widget { float: left;     margin-top: 4px; }
+
+.time_widget .timedisplay i {
+    font-size: 61px;
+    padding-right: 40px;
+    float: left;
+    font-weight: 300;
+    color: #f98629;
+}
+
+.time_widget .timedisplay {
+    float: right;
+    font-size: 1.6em;
+    vertical-align: middle;
+    font-weight: 400;
+    color: #434343;
+    padding: 19px 0px;
+}
+
+.time_widget .times {
+    float: left;
+    line-height: 47px;
+}
+
+.time_widget .times span {
+    font-size: 12px;
+    display: block;
+    color: #3e3e3e;
+    max-width: 12.5rem;
+    padding: 0 1px;
+    margin: 0 auto;
+    line-height: 1px; font-weight: 500;
+}
+
+
+.currentWeather{ padding: 0px !important; }
+.qodef-st-inner { float: left; width: 100%; position: relative; padding-bottom: 50px; }
+.qodef-st-subtitle:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateZ(0);
+    -moz-transform: translateY(-50%) translateZ(0);
+    transform: translateY(-50%) translateZ(0);
+    left: 4px;
+    display: block;
+    height: 2px;
+    width: 40px;
+    background-color: currentColor;
+}
+
+
+.grid {
+    display: block; position: relative;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 16.67%;
+  height: 230px;  border:5px solid #fff;
+  background: #fff; /*border:5px solid #fff;*/ overflow: hidden; 
+}
+.pointerhand {cursor: pointer;}
+.grid-item .grid-details { position: relative; height: 100%; overflow: hidden; }
+.grid-item .grid-details img { width: 100%; height: 100%; -webkit-transition: -webkit-transform .5s cubic-bezier(.215,.61,.355,1);
+    -moz-transition: -moz-transform .5s cubic-bezier(.215,.61,.355,1);
+    transition: transform .5s cubic-bezier(.215,.61,.355,1);  }
+.grid-item .grid-details:hover img {
+   -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    transform: scale(1.06);}
+
+.grid-item--width2 { width: 33.3%; }
+.grid-item--height2 { height: 460px; }
+
+.qodef-pli-text-holder {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(0,0,0,.6);
+    background: -webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.6));
+    background: -moz-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.6));
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.6));
+    opacity: 0;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+}
+
+.grid-item .grid-details:hover .qodef-pli-text-holder {
+    opacity: 1;
+}
+
+.qodef-pli-text-wrapper {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.qodef-pli-text {
+    position: relative;
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.qodef-pli-title {
+    color: #fff;
+    font-size: 25px; margin: 0px; line-height: 22px; font-weight: 700;
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: translate3d(-10px,0,0);
+    -moz-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-transition: -webkit-transform .65s cubic-bezier(.215,.61,.355,1),opacity .4s;
+    -moz-transition: -moz-transform .65s cubic-bezier(.215,.61,.355,1),opacity .4s;
+    transition: transform .65s cubic-bezier(.215,.61,.355,1),opacity .4s; text-transform: uppercase;
+}
+.view_more { display: table; margin:30px auto 0px auto; padding: 10px 20px; color: #333; border:2px solid #000; font-size: 16px; text-transform: uppercase; font-weight: 700; }
+.view_more:hover { background: #000; color: #fff; box-shadow: 2px 2px 2px #ddd; }
+.boxes_content{ padding: 7px 15px; position: absolute; top: 0px;  }
+.boxes_content h2 { font-weight: 700; font-size: 23px; margin-bottom: 10px;}
+.boxes_content p { font-weight: 400; font-size: 14px; margin-bottom: 0px; text-align: justify; display: block; line-height:19px; padding-right: 13px;  }
+.boxes_content .city_book { float: left; padding:6px 15px; color: #303030; background:none; border:2px solid #303030; margin-top: 0px; font-weight: 800; font-size: 15px;   }
+
+ .grid-item .grid-details:hover .qodef-pli-title {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.qodef-pli-category-holder {
+    position: relative;
+    display: block;
+    margin: 3px 0 0;
+}
+
+.qodef-pli-category-holder a {
+    color: #fff;
+    display: inline-block;
+    opacity: 0; position: relative;
+    -webkit-transform: translate3d(-10px,0,0);
+    -moz-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-transition: -webkit-transform .65s cubic-bezier(.215,.61,.355,1),opacity .4s;
+    -moz-transition: -moz-transform .65s cubic-bezier(.215,.61,.355,1),opacity .4s;
+    transition: transform .65s cubic-bezier(.215,.61,.355,1),opacity .4s;
+    z-index: 8;
+    font-size: 14px;
+    line-height: 1.57em;
+}
+
+ .grid-item .grid-details:hover .qodef-pli-category-holder a {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.qodef-pli-link {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.scrollbar
+{
+    height: 92px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+.container {
+    max-width: 1100px;
+}
+
+@media only screen and (min-width: 1390px) {
+.grid-item { height: 250px; }
+.grid-item--height2 { height: 500px; }
+}

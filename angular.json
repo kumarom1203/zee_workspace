@@ -1,0 +1,434 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "supervision": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/supervision",
+      "sourceRoot": "projects/supervision/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/supervision",
+            "index": "projects/supervision/src/index.html",
+            "main": "projects/supervision/src/main.ts",
+            "polyfills": "projects/supervision/src/polyfills.ts",
+            "tsConfig": "projects/supervision/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/supervision/src/favicon.ico",
+              "projects/supervision/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/supervision/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css",
+              "node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "node_modules/admin-lte/dist/css/adminlte.min.css",
+              "node_modules/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/admin-lte/plugins/jquery/jquery.min.js",
+              "node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js",
+              "node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
+              "node_modules/admin-lte/dist/js/adminlte.js",
+              "node_modules/admin-lte/dist/js/demo.js",
+              "node_modules/admin-lte/plugins/jquery-mousewheel/jquery.mousewheel.js",
+              "node_modules/admin-lte/plugins/raphael/raphael.min.js",
+              "node_modules/admin-lte/plugins/jquery-mapael/jquery.mapael.min.js",
+              "node_modules/admin-lte/plugins/jquery-mapael/maps/usa_states.min.js",
+              "node_modules/admin-lte/plugins/chart.js/Chart.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/supervision/src/environments/environment.ts",
+                  "with": "projects/supervision/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "6mb",
+                  "maximumError": "10mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "60kb",
+                  "maximumError": "100kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "supervision:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "supervision:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "supervision:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/supervision/src/test.ts",
+            "polyfills": "projects/supervision/src/polyfills.ts",
+            "tsConfig": "projects/supervision/tsconfig.spec.json",
+            "karmaConfig": "projects/supervision/karma.conf.js",
+            "assets": [
+              "projects/supervision/src/favicon.ico",
+              "projects/supervision/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/supervision/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/supervision/tsconfig.app.json",
+              "projects/supervision/tsconfig.spec.json",
+              "projects/supervision/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/supervision/e2e/protractor.conf.js",
+            "devServerTarget": "supervision:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "supervision:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "b2c": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/b2c",
+      "sourceRoot": "projects/b2c/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/b2c",
+            "index": "projects/b2c/src/index.html",
+            "main": "projects/b2c/src/main.ts",
+            "polyfills": "projects/b2c/src/polyfills.ts",
+            "tsConfig": "projects/b2c/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/b2c/src/favicon.ico",
+              "projects/b2c/src/assets"
+            ],
+            "styles": [
+              "projects/b2c/src/styles.scss",
+              "projects/b2c/src/assets/css/bootstrap.min.css",
+              "projects/b2c/src/assets/css/fontawesome.all.min.css",
+              "projects/b2c/src/assets/css/common.css",
+              "projects/b2c/src/assets/css/header.css",
+              "projects/b2c/src/assets/css/datepicker.min.css",
+              "projects/b2c/src/assets/css/animations.css",
+              "projects/b2c/src/assets/css/smooth-scrollbar.css",
+              "projects/b2c/src/assets/css/revoultion_slider.css",
+              "projects/b2c/src/assets/css/owl.carousel.min.css"
+            ],
+            "scripts": [
+              "projects/b2c/src/assets/js/jquery.js",
+              "projects/b2c/src/assets/js/popper.min.js",
+              "projects/b2c/src/assets/js/bootstrap.min.js",
+              "projects/b2c/src/assets/js/datepicker.js",
+              "projects/b2c/src/assets/js/datepicker.en.js",
+              "projects/b2c/src/assets/js/jquery.mousewheel.min.js",
+              "projects/b2c/src/assets/js/mapsvg.js",
+              "projects/b2c/src/assets/js/jquery.nanoscroller.min.js",
+              "projects/b2c/src/assets/js/css3-animate-it.js",
+              "projects/b2c/src/assets/js/revolution/jquery.themepunch.tools.min.js",
+              "projects/b2c/src/assets/js/revolution/jquery.themepunch.revolution.min.js",
+              "projects/b2c/src/assets/js/cs-select.js",
+              "projects/b2c/src/assets/js/country-code.js",
+              "projects/b2c/src/assets/js/isotope.pkgd.js",
+              "projects/b2c/src/assets/js/owl.carousel.min.js",
+              "projects/b2c/src/assets/js/jquery.mCustomScrollbar.concat.min.js",
+              "projects/b2c/src/assets/js/gallery.min.js",
+              "projects/b2c/src/assets/js/QFocus.js",
+              "projects/b2c/src/assets/js/country-code.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/b2c/src/environments/environment.ts",
+                  "with": "projects/b2c/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "20mb",
+                  "maximumError": "50mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "200kb",
+                  "maximumError": "500kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "b2c:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "b2c:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "b2c:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/b2c/src/test.ts",
+            "polyfills": "projects/b2c/src/polyfills.ts",
+            "tsConfig": "projects/b2c/tsconfig.spec.json",
+            "karmaConfig": "projects/b2c/karma.conf.js",
+            "assets": [
+              "projects/b2c/src/favicon.ico",
+              "projects/b2c/src/assets"
+            ],
+            "styles": ["projects/b2c/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/b2c/tsconfig.app.json",
+              "projects/b2c/tsconfig.spec.json",
+              "projects/b2c/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/b2c/e2e/protractor.conf.js",
+            "devServerTarget": "b2c:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "b2c:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "agent": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/agent",
+      "sourceRoot": "projects/agent/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/agent",
+            "index": "projects/agent/src/index.html",
+            "main": "projects/agent/src/main.ts",
+            "polyfills": "projects/agent/src/polyfills.ts",
+            "tsConfig": "projects/agent/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/agent/src/favicon.ico",
+              "projects/agent/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/supervision/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css",
+              "node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "node_modules/admin-lte/dist/css/adminlte.min.css",
+              "node_modules/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/admin-lte/plugins/jquery/jquery.min.js",
+              "node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js",
+              "node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
+              "node_modules/admin-lte/dist/js/adminlte.js",
+              "node_modules/admin-lte/dist/js/demo.js",
+              "node_modules/admin-lte/plugins/jquery-mousewheel/jquery.mousewheel.js",
+              "node_modules/admin-lte/plugins/raphael/raphael.min.js",
+              "node_modules/admin-lte/plugins/jquery-mapael/jquery.mapael.min.js",
+              "node_modules/admin-lte/plugins/jquery-mapael/maps/usa_states.min.js",
+              "node_modules/admin-lte/plugins/chart.js/Chart.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/agent/src/environments/environment.ts",
+                  "with": "projects/agent/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "20mb",
+                  "maximumError": "50mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "200kb",
+                  "maximumError": "500kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "agent:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "agent:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "agent:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/agent/src/test.ts",
+            "polyfills": "projects/agent/src/polyfills.ts",
+            "tsConfig": "projects/agent/tsconfig.spec.json",
+            "karmaConfig": "projects/agent/karma.conf.js",
+            "assets": [
+              "projects/agent/src/favicon.ico",
+              "projects/agent/src/assets"
+            ],
+            "styles": ["projects/agent/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/agent/tsconfig.app.json",
+              "projects/agent/tsconfig.spec.json",
+              "projects/agent/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/agent/e2e/protractor.conf.js",
+            "devServerTarget": "agent:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "agent:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  },
+  "defaultProject": "supervision"
+}

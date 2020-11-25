@@ -1,0 +1,102 @@
+<!-- <p> transaction-logs works! </p> -->
+
+<div class="card mb-3">
+    <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>
+            {{'Transaction Details List'}}
+        </div>
+    </div>
+    <form>
+        <div class="p-2">
+            <div class="form-group form-inline mb-0">
+                Full text search:
+                <input class="form-control ml-2" type="text" name="searchTerm"
+                    (keyup)="applyFilter($event.target.value)" />
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-borderless table-striped table-hover" matSort (matSortChange)="sortData($event)">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-left text-nowrap" *ngFor="let header of displayColumn;"
+                            mat-sort-header="{{header.key}}">
+                            {{header.value }} </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngIf="noData">
+                        <td colspan="11">
+                            <mat-spinner [diameter]="30" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+                        </td>
+                    </tr>
+                    <tr
+                        *ngFor="let data of respData | slice: (page - 1) * pageSize : (page - 1) * pageSize + pageSize; let i=index;">
+                        <td class="text-left text-muted">#{{i+1}}</td>
+                        <td class="text-left"> {{data['agent']}} </td>
+                        <td class="text-left"> {{data['transactiondate']*1000 | date: "medium"}} </td>
+                        <td class="text-left"> {{data['app_refernce']}} </td>
+                        <td class="text-left"> {{data['transactiontype']}} </td>
+                        <td class="text-left"> {{data['fare']}} </td>
+                        <td class="text-left" [innerHTML]="data['remarks']"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer pb-0">
+            <div class="d-flex w-100 justify-content-between">
+                <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+                </ngb-pagination>
+                <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="pageSize">
+                    <option [ngValue]="2">2 items per page</option>
+                    <option [ngValue]="4">4 items per page</option>
+                    <option [ngValue]="6">6 items per page</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<!-- <div class="transaction-logs">
+  <mat-form-field>
+      <input matInput placeholder="Search Transactions" #input>
+  </mat-form-field>
+  <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+      <mat-spinner></mat-spinner>
+  </div>
+  <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="Sno" matSortDirection="asc" matSortDisableClear>
+      <ng-container matColumnDef="Sno">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
+          <mat-cell *matCellDef="let lesson">{{lesson.Sno}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="agent">
+          <mat-header-cell *matHeaderCellDef>Agent</mat-header-cell>
+          <mat-cell *matCellDef="let lesson">{{lesson.agent}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="transactionDate">
+          <mat-header-cell *matHeaderCellDef>Transaction Date</mat-header-cell>
+          <mat-cell *matCellDef="let lesson">{{lesson.transactionDate}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="referenceNumber">
+          <mat-header-cell *matHeaderCellDef>Reference Number</mat-header-cell>
+          <mat-cell *matCellDef="let lesson">{{lesson.referenceNumber}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="transactionType">
+          <mat-header-cell *matHeaderCellDef>Transaction Type</mat-header-cell>
+          <mat-cell *matCellDef="let lesson">{{lesson.transactionType}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="amount">
+          <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
+          <mat-cell *matCellDef="let lesson">{{lesson.amount}}</mat-cell>
+      </ng-container>    
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+        <mat-cell *matCellDef="let lesson">{{lesson.description}}</mat-cell>
+    </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <mat-paginator [length]="transactionLogsCount" [pageSize]="3" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
+</div> -->

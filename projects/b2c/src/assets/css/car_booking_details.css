@@ -1,0 +1,691 @@
+.rowresult {
+    float: left;
+    transition: all 400ms ease-in-out 0s;
+    width: 100%;
+}
+
+.madgrid {
+    background: #fff none repeat scroll 0 0;
+    position: relative;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.11);
+    display: block;
+    position: relative;
+    margin: 10px 0;
+}
+
+.madgrid.forhtlpopover {
+    float: left;
+    overflow: visible;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 0px;
+}
+
+.sckint {
+    display: block;
+    padding: 0px 0 0 0; float: right; width: 100%; margin-top: 10px;
+}
+
+.ffty {
+    float: left;
+    width: 25%;
+}
+
+.lblbk_book {
+    color: #666;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 4px 10px 0 0;
+    text-align: left;
+    float: left;
+}
+
+.lblbk_book .far {
+    font-size: 16px;
+    padding: 0 5px 0 0;
+    color: #0027ff;
+}
+
+.fuldate_book {
+    display: block;
+    height: 52px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.bigdate_book {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 15px;
+    padding: 0 0px;
+    vertical-align: middle;
+    display: block;
+}
+
+
+.biginre_book {
+    color: #000;
+    display: table-cell;
+    font-size: 14px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nigthcunt {
+    border-top: 1px solid #dfdddd;
+    color: #000;
+    display: block;
+    font-size: 14px;
+    overflow: hidden; font-weight: 600;
+    padding: 12px 10px 0px;
+    text-align: center;
+    line-height: normal;
+}
+
+.imagehtldis {
+    display: block;
+    height: 90px;
+    background: #fff;
+}
+
+.rowresult.r-r-i .imagehtldis img {
+    height: 90px;
+    width: 100%;
+}
+
+.sidenamedesc {
+    display: block;
+    width: 100%;
+}
+
+.celhtl {
+    float: left;
+}
+
+.width70 {
+    width: 72%;
+}
+
+.width30 {
+    width: 28%;
+}
+
+.celhtl.width30 {
+    vertical-align: middle;
+    padding: 39px 0 20px 0px;
+    overflow: hidden;
+    display: block;
+}
+
+.sidepricewrp {
+    display: block;
+    overflow: hidden;
+    padding: 0px;
+}
+.car_det_view { display: block; text-align: center; margin-top: 7px; color: #000; font-weight: 500; font-size:14px; }
+.priceflights {
+    color: #2196F3;
+    display: block;
+    font-size: 21px;
+    overflow: hidden;
+    text-align: right;
+    font-weight: 700;
+    margin: 20px 0 0;
+}
+
+.priceflights strong {
+    font-weight: 700;
+    margin-right: 3px;
+}
+
+.prcstrtingt {
+    color: #666;
+    display: block;
+    font-size: 13px;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.bookallbtn {
+    background: #000000 none repeat scroll 0 0;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    color: #fff !important;
+    display: table;
+    font-size: 16px;
+    width: 110px;
+    padding: 7px 10px;
+    text-align: center;
+    margin: 13px auto;
+}
+
+.innd {
+    display: block;
+    
+    padding: 0px 0 0 15px;
+    position: relative;
+}
+
+
+.imptpldz {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+
+.shtlnamehotl {
+    display: table;
+    font-size: 18px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: normal;
+    padding: 0;
+    float: left;
+    font-weight: 600;
+}
+
+.h-name {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 7px;
+    font-weight: 600;
+    display: inline;
+    font-size: 15px;
+    color: #000;
+    width: 100%;
+}
+
+.shtlnamehotl a { color: #000 !important; }
+.starrtinghotl.rating-no {
+   position: relative;
+    top: 2px;
+    padding: 0;
+    font-size: 14px;
+    display: block;
+    vertical-align: middle;
+    color: #0027ff;
+}
+
+.starrtinghotl.rating-no img { vertical-align: inherit; width: 80px;}
+
+.adreshotle {
+   color: #767676;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 10px;
+    padding: 4px 0;
+    overflow: hidden;
+    float: left;
+    text-transform: capitalize;
+    font-weight: normal;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.h-adr i {
+    padding: 0 5px 0 0;
+    font-size: 14px;
+    color: #000;
+}
+
+.preclsdv {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.canplyto {
+    color: #529901;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    position: relative;
+    vertical-align: middle;
+}
+
+
+.canplyto .fa {
+    color: #fff;
+    border: 1px solid #529901;
+    border-radius: 100%;
+    font-size: 12px;
+    background: #529901;
+    height: 17px;
+    width: 17px;
+    text-align: center;
+    line-height: 17px;
+}
+
+.bothicntri {
+    float: left;
+    width: 100%;
+    display: table;
+}
+
+.mwifdiv {
+    display: block;
+    float: left;
+    overflow: hidden;
+    padding: 0px 0 0;
+}
+
+.maprew {
+    padding: 0 !important;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+
+.hoteloctnf {
+    color: #0072FF;
+    display: block;
+    font-size: 14px;
+    margin: 0 10px; font-weight: 600;
+    text-align: right;
+}
+
+.hoteloctnf a { color: #2196F3; }
+
+.hoteloctnf .location-map {
+    text-align: center;
+    line-height: 33px;
+    color: #0072FF;
+    font-size: 16px;
+}
+
+.htl_spr li {
+    float: left; margin: 6px 10px 0px; 
+    
+}
+
+
+.htl_spr li:first-child {
+    margin-left: 0;
+}
+
+.htl_spr li span {
+    font-size: 14px;
+}
+
+.htl_spr li i {
+
+    
+    padding: 0;
+    
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #464646;
+}
+
+.mn_dis {
+    width: 100%;
+    float: left;
+    background: #fff;
+    border: solid 1px #ddd;
+    padding: 10px;
+}
+
+.middleCol {
+    display: block;
+    overflow: hidden;
+}
+
+.features1 {
+    display: block;
+    margin-top: 16px;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+.features1 li {
+    float: left;
+    padding: 0px 5px;
+    width: 25%;
+    border-right: 1px solid #cbcbcc;
+}
+
+
+.features1 li.transmission span {
+    background-position: -24px 0;
+}
+.features1 li .mn-icon {
+    background: rgba(0, 0, 0, 0) url(../images/icons-car-features.png) no-repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 24px;
+    margin: 0 5px 0 5px;
+    width: 24px;
+}
+
+li.fuel.tooltipv {
+    width: 50%;
+}
+
+li.fuel.tooltipv i {
+    display: block;
+    float: left;
+    height: 24px;
+    margin: 0 5px 0 5px;
+    width: 24px;
+    background: #79797a;
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.features1 li strong {
+    color: #000;
+    display: block;
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+#htldets0 {
+    padding-top: 10px;
+}
+
+.parasub {
+    color: #666;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.checklist {
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+    padding:0px;
+}
+
+.checklist li {
+    color: #666;
+    float: left;
+    font-size: 15px;
+    list-style: none;
+    line-height: 18px;
+    margin: 5px 0;
+    width: auto;
+    padding: 0px 30px 0px 0px;
+}
+
+.parasub .checklist li {
+    font-size: 13px;
+    margin: 5px 0;
+    width: auto;
+    padding: 0px 30px 0px 0px;
+}
+
+
+.checklist li .fa {
+    color: #2196f3;
+    padding-right: 7px;
+}
+
+.linebrk {
+    background: none repeat scroll 0 0 #eee;
+    display: block;
+    height: 1px;
+    margin: 10px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sumtab {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    padding: 0px 15px;
+    position: relative;
+    color: #2196F3;
+}
+
+.mn_dis.car_show.collapse button.sumtab {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: #f47920;
+}
+
+.age_lmt {
+    width: 100%;
+    float: left;
+}
+
+.includ { background: #ebebeb;
+    padding: 5px 0px;
+    margin-top: 10px; }
+
+.parasub {
+    color: #666;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.checklist {
+    display: block;
+    margin: 0px; padding:0px;
+    overflow: hidden;
+}
+
+.parasub .checklist li {
+    font-size: 13px;
+    margin: 5px 0;
+    width: auto;
+    padding: 0px 30px 0px 0px;
+    color: #000;
+    float: left;
+    line-height: 18px;
+    list-style: none;
+    font-weight: 500;
+}
+/*Guest Login*/
+
+.loginspld {
+    float: left;
+    margin: 0 0 0px;
+    width: 100%;
+}
+
+.logininwrap {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    display: block;
+    margin: 10px 0px;
+    overflow: hidden;
+}
+
+.signinhde {
+    background: #000000 none repeat scroll 0 0;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    overflow: hidden;
+    padding: 10px;
+    color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.newloginsectn {
+    display: table;
+    overflow: hidden;
+    padding: 15px;
+    width: 100%;
+}
+
+.celoty {
+    display: table-cell;
+    float: left;
+    vertical-align: top;
+}
+
+.noteinote {
+    color: #666;
+    display: block;
+    margin: 8px 0 0 2px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 13px;
+}
+
+.havealrdy {
+    display: block;
+    margin: 0px 0;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.twotogle {
+    display: block;
+    
+}
+
+.cntgust {
+    display: block;
+    
+}
+
+.phoneumber {
+    display: block;
+    overflow: hidden;
+}
+
+
+
+.sidepo {
+    display: block;
+    margin: 12px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.newslterinput {
+    border: 1px solid #888;
+    font-size: 14px;
+    height: 40px;
+    padding: 10px;
+    width: 100%;
+}
+
+.haveacntd {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.noteinote {
+    color: #666;
+    display: block;
+    margin: 8px 0 0 2px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 13px;
+}
+
+.continye {
+    margin: 15px 0 0;
+}
+
+
+.bookcont {
+    background: #000;
+    border: none;
+    border-radius: 0px;
+    color: #ffffff;
+    display: table; text-align: center;
+    font-size: 15px;
+    padding: 9px 15px;
+    width: 100%;
+    box-shadow: 1px 1px 3px 0px #c8c6c6;
+    border: 1px solid #9b9797;
+}
+
+.bookcont:hover { color: #fff; box-shadow: -1px -1px 4px 0px #4b4747;
+    border: 1px solid #151414; }
+
+.alrdyacnt {
+    display: none;
+    
+}
+
+.relativemask {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.clainput {
+    border: 1px solid #ddd;
+    float: left;
+    font-size: 14px;
+    height: 40px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.frgotpaswrd {
+    display: block;
+    font-size: 13px;
+    margin: 5px 0 0;
+    overflow: hidden;
+}
+
+.orround {
+    background: none repeat scroll 0 0 #eee;
+    border: 1px solid #e7e7e7;
+    border-radius: 100%;
+    color: #666;
+    display: block;
+    font-size: 14px;
+    height: 50px;
+    line-height: 48px;
+    margin: 94px auto;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    z-index: 1;
+}
+.linetopbtm:after { position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    content: '';
+    background: #dfdfdf;
+    left: 0px;
+    right: 0px;
+    margin: auto;}
+
+  .booklogin { margin: 77px 0px; } 

@@ -1,0 +1,155 @@
+<!-- <p>book-room works!</p> -->
+<div class="clearfix"></div>
+<div class="bookrom">
+    <div class="col-12 nopad">
+        <div class="container">
+            <div class="row animatedParent">
+                <div class="qodef-st-inner animated bounceInLeft fadeInLeftShort">
+                    <span class="qodef-st-subtitle">
+                        Enjoy your stay
+                    </span>
+                    <h1 class="qodef-st-title">
+                        BOOK A STYLISH ROOM
+                    </h1>
+                    <p class="qodef-st-text">
+                        Proin qual de suis erestopius liqueenean sollicituin, lorem quis bibendum auct ornisi. Nam nec tellus a odio
+                        <br>
+                        tincidunt auctor a ornare. Sed non mauris vitae.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="gridroom">
+            <div id="roombook">
+                <owl-carousel-o [options]="customOptions" >
+                    <ng-container *ngFor="let hotel of hotels">
+                    <ng-template carouselSlide [id]="hotel.hotel_id">
+                        <div class="grid-item-room grid-item-room-height2 grid-item-room-width2" (click)="one();">
+                            <div class="grid-room-details" (click)="two()">
+                                <img [src]="'https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-room-img-1-650x714.jpg'" [alt]="''" [title]="hotel.hotel_name">
+                                <div class="qodef-pli-text-holder">
+                                    <div class="qodef-pli-text-wrapper">
+                                        <div class="qodef-pli-text">
+                                            <div class="qodef-pli-category-holder">
+                                                <a itemprop="url" class="qodef-pli-category" href="#"> <span> {{'&#8377;'}} </span> {{' '+hotel?.price}}  </a>
+                                            </div>
+                                            <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title d-block text-truncate py-2">
+                                                {{hotel?.hotel_name}}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                    </ng-container> 
+                </owl-carousel-o>
+            </div>
+            <!-- <div id="roombook" class="owl-carousel owl-theme">
+                <div class="grid-item-room grid-item-room-height2 grid-item-room-width2" *ngFor="let hotel of hotels">
+                    <div class="grid-room-details">
+                        <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-room-img-1-650x714.jpg">
+                        <div class="qodef-pli-text-holder">
+                            <div class="qodef-pli-text-wrapper">
+                                <div class="qodef-pli-text">
+                                    <div class="qodef-pli-category-holder">
+                                        <a itemprop="url" class="qodef-pli-category" href="#"> <span> {{'&#8377;'}} </span> {{' '+hotel?.price}}</a>
+                                    </div>
+                                    <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                        {{hotel?.hotel_name}}
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="grid-item-room grid-item-room-height2 grid-item-room-width2">
+                    <div class="grid-room-details">
+                        <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-room-img-2-650x714.jpg">
+                        <div class="qodef-pli-text-holder">
+                            <div class="qodef-pli-text-wrapper">
+                                <div class="qodef-pli-text">
+                                    <div class="qodef-pli-category-holder">
+                                        <a itemprop="url" class="qodef-pli-category" href="#">$678</a>
+                                    </div>
+                                    <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                        Street Art
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item-room grid-item-room-height2 grid-item-room-width2">
+                    <div class="grid-room-details">
+                        <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-room-img-3-650x714.jpg">
+                        <div class="qodef-pli-text-holder">
+                            <div class="qodef-pli-text-wrapper">
+                                <div class="qodef-pli-text">
+                                    <div class="qodef-pli-category-holder">
+                                        <a itemprop="url" class="qodef-pli-category" href="#">$678</a>
+                                    </div>
+                                    <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                        Street Art
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item-room grid-item-room-height2 grid-item-room-width2">
+                    <div class="grid-room-details">
+                        <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-room-img-1-650x714.jpg">
+                        <div class="qodef-pli-text-holder">
+                            <div class="qodef-pli-text-wrapper">
+                                <div class="qodef-pli-text">
+                                    <div class="qodef-pli-category-holder">
+                                        <a itemprop="url" class="qodef-pli-category" href="#">$678</a>
+                                    </div>
+                                    <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                        Coconut Room
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item-room grid-item-room-height2 grid-item-room-width2">
+                    <div class="grid-room-details">
+                        <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-room-img-2-650x714.jpg">
+                        <div class="qodef-pli-text-holder">
+                            <div class="qodef-pli-text-wrapper">
+                                <div class="qodef-pli-text">
+                                    <div class="qodef-pli-category-holder">
+                                        <a itemprop="url" class="qodef-pli-category" href="#">$678</a>
+                                    </div>
+                                    <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                        Street Art
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item-room grid-item-room-height2 grid-item-room-width2">
+                    <div class="grid-room-details">
+                        <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/05/main-home-room-img-3-650x714.jpg">
+                        <div class="qodef-pli-text-holder">
+                            <div class="qodef-pli-text-wrapper">
+                                <div class="qodef-pli-text">
+                                    <div class="qodef-pli-category-holder">
+                                        <a itemprop="url" class="qodef-pli-category" href="#">$678</a>
+                                    </div>
+                                    <h3 id="title5" itemprop="name" class="qodef-pli-title entry-title">
+                                        Street Art
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+</div>

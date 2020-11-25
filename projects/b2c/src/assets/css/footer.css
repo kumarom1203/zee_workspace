@@ -1,0 +1,61 @@
+.qodef-page-footer {width: 100%; float: left; position: fixed;
+    font-family: 'Titillium Web', sans-serif;
+    z-index:-1; background:#000; padding: 390px 0px 55px 0px; bottom: 0px;
+    -webkit-transition: left .33s cubic-bezier(.694,.0482,.335,1);
+    -moz-transition: left .33s cubic-bezier(.694,.0482,.335,1);
+    transition: left .33s cubic-bezier(.694,.0482,.335,1);
+}
+.qodef-page-footer .container { max-width: 1100px; }
+.footlogo{ margin:30px auto 0px auto; display: table;  }
+.footlogo img { width: 115px;     margin-left: 11px; }
+
+.contactlink { position: relative;  width: 33.33333%; float: left; padding-left: 22px; }
+.legallink { position: relative; margin: 15px auto 20px auto; display: table; }
+.legallink a{ color: #888; font-size: 16px; padding: 5px 15px; }
+.qodef-icon-widget-holder {
+    margin: 0 0px;
+    font-size: 16px; 
+    -webkit-transition: color .2s ease-out;
+    -moz-transition: color .2s ease-out;
+    transition: color .2s ease-out;
+    color: #fff; display: table;
+    padding: 8px 0px;
+}
+
+
+.contactlink1 { position: relative; font-size: 16px; color: #fff; margin: 25px auto 20px auto; display: table; width: 100%; padding-left: 22px; padding-right: 22px;}
+
+.contactlink1 .qodef-icon-widget-holder1 {
+    margin: 0 0px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 17px 0px; font-family: 'Titillium Web', sans-serif;
+    border-radius: 30px;
+}
+.qodef-icon-widget-holder1:hover { color: #bfbfbf; }
+
+.container_foot { width: 850px; margin: auto; }
+.qodef-icon-widget-holder:hover { color: #bfbfbf; }
+.qodef-page-footer .widget {
+    color: #fff;
+    margin: 15px auto;
+    float: left;
+    margin-top: 41px;
+    font-size: 16px;
+}
+
+.qodef-social-icon-widget-holder span {
+    font-size: 18px;
+    margin: 0 0px 0 20px; color: #fff; webkit-transition: color .2s ease-out;
+    -moz-transition: color .2s ease-out;
+    transition: color .2s ease-out;
+}
+
+.qodef-social-icon-widget-holder .fa-twitter:hover { color: #00acee; }
+.qodef-social-icon-widget-holder .fa-facebook-f:hover { color: #3b5998; }
+.qodef-social-icon-widget-holder .fa-instagram:hover { background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+.qodef-social-icon-widget-holder .fa-linkedin-in:hover { color: #0e76a8; }
+.qodef-social-icon-widget-holder .fa-youtube:hover { color: #c4302b; }

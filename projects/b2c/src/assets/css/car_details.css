@@ -1,0 +1,853 @@
+.result-container {background-color: #ededed; padding: 1.5rem 0 2.5rem;}
+.htldetailspage {
+    float: left;
+    padding: 15px 15px 15px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 15px;
+}
+
+.rowfstep {
+    display: block;
+    overflow: hidden;
+}
+
+.htladdet {
+    float: left;
+    background: #fff;
+    width: 60%;
+    padding: 1px 0px;
+    overflow: hidden;
+    display: block;
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.distance_title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color: #2196f3;
+    float: left;
+    width: 100%;
+    line-height: 43px;
+    display: inline-block;
+    border-bottom: 2px solid #e5ecf3;
+    padding-bottom: 7px;
+}
+
+.citysvg {
+    width: 37px;
+    float: left;
+    margin-right: 12px;
+}
+
+.distance_list {
+    margin-bottom: 11px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.htladdet > span {
+    font-size: 22px;
+    color: #0f294d;
+    font-weight: 800;
+}
+
+.htlratpz {
+    display: inline-block;
+    float: none;
+    margin-left: 6px;
+    line-height: 10px;
+    direction: rtl;
+}
+
+.htladdet > span {
+    font-size: 22px;
+    color: #0f294d;
+    font-weight: 800;
+}
+
+.marhtldet {
+    display: table;
+    float: none;
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.marhtldet .locadres {
+    display: table-cell;
+    font-size: 15px;
+    color: #666;
+    font-weight: 500;
+    float: left;
+    width: 98%;
+    white-space: nowrap;
+}
+
+.stdrmac {
+    display: table;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px 0;
+    font-size: 15px;
+    line-height: 30px;
+    color: #0f294d;
+    margin-top: 0px;
+}
+
+.marhtldet .stdrmac {
+    margin-top: 3px;
+}
+
+.stdrmac ul li {
+    float: left;
+    margin-right: 10px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #0072FF;
+    font-weight: 600;
+}
+
+.htlmapdtls {
+    position: relative;
+    top: 18px;
+    right: 2px;
+    font-size: 16px;
+    width: auto;
+    padding: 10px 20px;
+    text-align: center;
+    background: #000;
+    color: #fff !important;
+    border-radius: 4px;
+    z-index: 999999;
+    display: inline-block;
+    float: right;
+    font-weight: 600;
+}
+
+.resmagfix {
+    padding: 15px 15px 0px !important;
+    background: #ededed;
+}
+
+.amthtlrs {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 26px;
+    color: #0f294d;
+}
+
+.resmagfix .amthtlrs {
+    float: right;
+    text-align: right;
+    padding: 11px 0px;
+    font-weight: 800;
+    line-height: 28px; width: 40%;
+}
+
+.pernyt {
+    font-size: 15px;
+    color: #999;
+    padding: 0 0px;
+    font-weight: 500;
+    display: block;
+}
+
+.htlfull_dtls {
+    float: left;
+    width: 100%;
+    padding: 3px 0px;
+    margin: 0;
+}
+
+
+.htlamtnyt {
+    width: 60%;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.stdrmac {
+    display: table;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px 0;
+    font-size: 15px;
+    line-height: 30px;
+    color: #0f294d;
+    margin-top: 0px;
+}
+
+.stdnonaclt {
+    display: table-cell;
+    float: left;
+    font-size: 20px;
+    color: #0072FF;
+    font-weight: 600;
+}
+
+.htlamtnytstd {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    padding: 10px 0 10px 0px;
+}
+
+.stdnonacltfre {
+    display: table-cell;
+    float: left;
+    font-size: 15px;
+    color: #157019;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.untdate {
+    display: table-cell;
+    float: right;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f294d;
+    line-height: 24px;
+}
+
+.chkdatetacell {
+    display: table;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding: 7px 0px;
+    margin-bottom: 2px;
+}
+
+.chkin {
+    display: table-cell;
+    font-size: 15px;
+    color: #0f294d;
+    font-weight: 600;
+    float: left;
+}
+
+.chkdate {
+    display: table-cell;
+    font-size: 15px;
+    color: #000;
+    font-weight: 600;
+    float: right;
+    text-transform: capitalize;
+}
+
+.hotel_detail_amenity_major {
+    float: left;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.hotel_detail_amenity_major li {
+    float: left;
+    margin-right: 13px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #0f294d;
+}
+
+.show_mores_amenities {
+    float: right;
+    margin-right: 6px;
+}
+
+
+.show_mores_amenities a {
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 3px 10px;
+    display: inline-block;
+    text-align: right;
+    background: #000;
+    margin-top: 0px;
+}
+
+.bookallbtn {
+    background: #000 none repeat scroll 0 0;
+    border: 1px solid #000;
+    border-radius: 0px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 15px 15px;
+    text-align: center; margin-top: 20px;
+    float: right;
+}
+
+.htlbkftsz {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+}
+
+.filtered-item {
+    background-color: #d0d1d4;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #000;
+    margin: 0 5px 10px 0;
+    display: inline-block;
+    line-height: normal;
+}
+
+.bookallbtn:hover {
+    color: #fff;
+}
+
+.fuldownsct {
+    float: left;
+    width: 100%;
+}
+
+.sectdiv {
+    width: 100%;
+    float: left;
+}
+
+.innertabs {
+    background: none repeat scroll 0 0 #ffffff;
+    float: left;
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.mobile_view_header {
+    display: block !important;
+    font-size: 22px;
+    color: #0f294d;
+    margin: 0px;
+    padding: 10px 15px;
+    font-weight: bold;
+    float: left;
+    letter-spacing: 0.3px;
+}
+
+h3.mobile_view_header {
+    padding: 10px !important;
+}
+
+
+.padinnerntb {
+    float: left;
+    width: 100%;
+    padding: 0;
+}
+
+.lettrfty {
+    color: #333;
+    display: block;
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    padding: 10px 11px;
+}
+
+.short-text {
+    overflow: hidden;
+    height: 100px;
+}
+
+.full-text { height: auto!important; }
+
+.tabspl {
+    float: left;
+    padding: 10px 0 10px 0px;
+    width: 100%;
+}
+
+
+.tabspl.forhotelonly {
+    padding: 5px 0;
+}
+
+.details_box .tabrow {
+    background: #f0f2f5;
+    padding: 15px;
+    float: left;
+    width: 100%;
+}
+
+.show-more {
+    text-align: right;
+    display: block !important;
+    padding-right: 15px;
+}
+
+.show-more a {
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 3px 10px;
+    display: inline-block;
+    text-align: right;
+    background: #000;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.romsoutdv {
+    float: left;
+    width: 100%;
+    display: block;
+    background: none;
+    padding: 20px;
+}
+
+.tab_htl_detail .romsoutdv {
+    background: #fff;
+    padding: 0px 0px;
+}
+
+.romsoutsep {
+    background: #000;
+    overflow: hidden;
+    padding: 12px 0;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+}
+
+.romstitout {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 10px;
+    color: #ececec;
+}
+
+.insiderooms {
+    float: left;
+    width: 100%;
+    padding: 0px 0px;
+    border-bottom: 10px solid #ededed;
+}
+
+.room_options {
+    padding: 15px 15px 15px 15px;
+    border-right: 1px solid #dfdfdf;
+}
+
+.roomsticky {
+    /*position: sticky;
+    top: 50px;*/
+}
+
+.roomsticky img { width: 100%; height: 130px;  margin: 0px auto;
+    display: block; }
+
+.romtypestd {
+    font-size: 22px;
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    color: #0f294d;
+    font-weight: 700; margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.room_loop {
+    width: 100%;
+    float: left;
+}
+
+.room_loop:nth-child(odd) {
+    background: #fff;
+}
+
+.room_loop:last-child {
+    margin-bottom: 5px;
+}
+
+.right_options {
+    padding: 15px 15px 15px 15px;
+    border-right: 1px solid #dfdfdf;
+    min-height: 150px;
+}
+
+.listopt {
+    color: #0f294d;
+    font-weight: 700;
+    display: block;
+    font-size: 16px;
+}
+
+.noof_ave {
+    text-align: left;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #121212;
+    margin: 3px 0px;
+    padding: 2px 0px;
+    font-weight: 600;
+    border-radius: 3px;
+    text-overflow: ellipsis;
+    line-height: 26px;
+    white-space: nowrap;
+}
+
+.noof_ave img {
+    width: 16px;
+    height: 26px;
+    float: left;
+    margin-right: 10px;
+}
+
+.romtypefrecan {
+    font-size: 14px;
+    color: #157019;
+    text-align: left;
+    float: left;
+    width: 100%;
+    padding: 0;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.romtypefrecan img {
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin-right: 10px;
+}
+
+.shwrmsdv {
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    float: left;
+    margin: 5px 0px 0px 0px;
+    color: #2196F3 !important;
+    clear: both;
+    text-align: center;
+}
+
+.row-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+
+.total_cost {
+    text-align: center;
+    padding: 20px 0px !important;
+}
+
+.total_cost .myTooltips {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+}
+
+.total_cost .ninenyt {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+.romsfst {
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+
+.bookallbtn {
+    background: #000 none repeat scroll 0 0;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 11px 15px;
+    text-align: center;
+    float: right;
+}
+
+.rombtndv {
+    text-align: center;
+    float: none;
+    margin: 41px auto;
+    font-size: 20px;
+    padding: 5px;
+    line-height: 36px;
+    display: table;
+    padding: 5px 30px;
+}
+
+.search-result .modal {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    z-index: 10000050;
+}
+
+#roomCancelModal .modal-content {
+    border: none;
+    border-radius: 0;
+    width: 65%;
+    text-align: center;
+    margin: 140px auto 0;
+    background: #f8f8f8;
+}
+
+#roomCancelModal .modal-title {
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.policy_text {
+    font-size: 15px;
+    overflow: hidden;
+    text-align: justify;
+    line-height: 27px;
+    font-weight: 500;
+    color: #060606;
+}
+
+#roomCancelModal .modal-footer {
+    border-top: none;
+}
+
+#roomCancelModal .modal-footer .btn {
+    border-radius: 0px;
+    background: #000 !important;
+    color: #fff;
+    font-size: 18px;
+    padding: 3px 10px;
+    border: 1px solid #000;
+}
+
+.checksvg {
+    width: 15px;
+    height: 20px;
+    line-height: normal;
+    margin-right: 5px;
+}
+
+.facltyid {
+    color: #383e45;
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 7px 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.nearhotel_list {
+    width: 98%;
+    float: left;
+    padding: 6px;
+    margin: 1% 1%;
+    border: 1px solid #e1e2ea;
+    border-radius: 4px;
+    background: #fcfcfc;
+    box-shadow: 0 4px 8px 0 rgba(138, 107, 118, 0.15);
+}
+
+.nearhotel_img {
+    width: 35%;
+    float: left;
+}
+
+.nearhotel_img img {
+    width: 100%;
+    height: 85px;
+    border-radius: 4px;
+}
+
+.nearhotel_info {
+    width: 65%;
+    float: left;
+    padding-left: 10px;
+}
+
+.nearhotel_info h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0px;
+    color: #0f294d;
+    margin-bottom: 6px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.hotladdress {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2196f3;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 2px;
+    text-overflow: ellipsis;
+    display: block;
+}
+.cancel-policy-btn img { width: 25px; }
+.starrtinghotl.rating-no {
+    position: relative;
+    top: 2px;
+    padding: 0;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.width90 {
+    width: 90%;
+    float: none;
+    margin: 0px auto;
+}
+
+#NearHotels.owl-theme .owl-controls .owl-buttons div {
+    color: #FFF;
+    display: inline-block;
+    zoom: 1;
+    margin: 5px;
+    padding: 3px 10px; position: absolute;
+    font-size: 12px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background: #000; font-size: 0px;
+    filter: Alpha(Opacity=50);
+    opacity: 1; width: 40px; height: 40px;
+}
+
+#NearHotels .owl-buttons { position: absolute; top: 45%; width: 100%; }
+#NearHotels.owl-theme .owl-controls .owl-buttons .owl-prev {  left: -54px;color: #fff;}
+
+#NearHotels.owl-theme .owl-controls .owl-buttons .owl-next { right: -54px; color: #fff; }
+
+#NearHotels.owl-theme .owl-controls .owl-buttons .owl-prev:before {position: absolute;
+    position: absolute;
+    left: 12px;
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f053';
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: normal;
+    top: 6px;}
+
+#NearHotels.owl-theme .owl-controls .owl-buttons .owl-next:before { position: absolute;
+    position: absolute;
+    right: 12px;
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f054';
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: normal;
+    top: 6px;}
+
+
+.padinnerntb {
+    float: left;
+    width: 100%;
+    padding: 0;
+}
+
+.htlfac_lity {
+    padding: 10px 7px;
+}
+
+#policy_div p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+#moreAboutHotel .modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: #343738;
+    color: #fff;
+    font-size: 14px;
+}
+
+#moreAboutHotel .modal-header .close {
+    margin-top: -9px;
+    color: #fff;
+    opacity: 1;
+}
+
+#moreAboutHotel .modal-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#moreAboutHotel .btn-default { background: #000; border:1px solid #000; color: #fff; }
+
+#more_room_opt .owl-buttons { position: absolute; top: 45%; width: 100%; }
+
+#more_room_opt.owl-theme .owl-controls .owl-buttons div {
+    color: #FFF;
+    display: inline-block;
+    zoom: 1;
+    margin: 5px;
+    padding: 3px 10px; position: absolute;
+    font-size: 12px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px; font-size: 0px;
+    background: rgba(0, 0, 0, 0.46);
+    filter: Alpha(Opacity=50);
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+}
+
+#more_room_opt.owl-theme .owl-controls .owl-buttons .owl-prev {  left: 0px;color: #fff;}
+
+#more_room_opt.owl-theme .owl-controls .owl-buttons .owl-next { right: 0px; color: #fff; }
+
+#more_room_opt.owl-theme .owl-controls .owl-buttons .owl-prev:before {position: absolute;
+    left: 15px;
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f053';
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: normal;
+    top: 5px;}
+
+#more_room_opt.owl-theme .owl-controls .owl-buttons .owl-next:before { position: absolute;
+    right: 15px;
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f054';
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: normal;
+    top: 5px;}

@@ -1,0 +1,19 @@
+<!-- <p>edit-branch works!</p> -->
+<!-- <div class="close" style="cursor: pointer;" (click)="onCloseDialog()">&times;</div> -->
+<form [formGroup]="regConfig" (ngSubmit)="onSubmitDialog()">
+    <h1 mat-dialog-title>{{"Edit Barnch"}}</h1>
+    <div mat-dialog-content class="example-container">
+        <mat-form-field>
+            <mat-label>Branch Name</mat-label>
+            <input matInput type="text" formControlName="branchName" placeholder="" cdkFocusInitial>
+            <mat-error *ngIf="hasError('branchName', 'required')"> <small> This field is required* </small> </mat-error>
+            <mat-error *ngIf="hasError('branchName', 'maxlength')"> <small> Maximum characters exceeded* </small>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="pb-5" mat-dialog-actions>
+        <span class="btn btn-sm btn-danger" (click)="onCloseDialog()"> Cancel </span>
+        &nbsp; &nbsp;
+        <button class="btn btn-sm btn-success" [disabled]="regConfig.invalid">Save</button>
+    </div>
+</form>

@@ -1,0 +1,99 @@
+.category {
+    background: #fff;
+    padding   : 15px 0px 0px 0px;
+}
+
+.qodef-banner-image {
+    position      : relative;
+    display       : inline-block;
+    width         : 100%;
+    margin-bottom : 10px;
+    height        : auto;
+    vertical-align: middle;
+    overflow      : hidden;
+}
+
+.qodef-banner-image img {
+    transition           : transform .5s cubic-bezier(.215, .61, .355, 1);
+    -webkit-transition   : -webkit-transform .5s cubic-bezier(.215, .61, .355, 1);
+    -moz-transition      : -moz-transform .5s cubic-bezier(.215, .61, .355, 1);
+    display              : block;
+    width                : 100%;
+    /* height            : 100%; */
+    height               : 340.133px !important;
+}
+
+
+.qodef-banner-image:hover img {
+    -webkit-transform: scale(1.06);
+    -moz-transform   : scale(1.06);
+    transform        : scale(1.06);
+}
+
+.pad5 {
+    padding: 0px 5px !important;
+}
+
+.qodef-banner-text-holder {
+    padding         : 70px 20px;
+    text-align      : center;
+    position        : absolute;
+    display         : block;
+    width           : 100%;
+    height          : 100%;
+    top             : 0;
+    left            : 0;
+    padding         : 35px;
+    background-color: rgba(0, 0, 0, .2);
+    box-sizing      : border-box;
+}
+
+.qodef-banner-text-holder:after {
+    content           : '';
+    position          : absolute;
+    display           : block;
+    width             : 100%;
+    height            : 100%;
+    top               : 0;
+    left              : 0;
+    background-color  : rgba(0, 0, 0, .2);
+    opacity           : 0;
+    -webkit-transition: opacity .3s;
+    -moz-transition   : opacity .3s;
+    transition        : opacity .3s;
+}
+
+.qodef-banner-text-outer {
+    position    : relative;
+    display     : table;
+    table-layout: fixed;
+    height      : 100%;
+    width       : 100%;
+    z-index     : 10;
+}
+
+.qodef-banner-text-inner {
+    position      : relative;
+    display       : table-cell;
+    height        : 100%;
+    width         : 100%;
+    vertical-align: middle;
+}
+
+.qodef-banner-text-inner h1 {
+    color         : #fff;
+    font-weight   : 700;
+    text-transform: uppercase;
+    font-size     : 60px;
+    margin-bottom : 0px;
+}
+
+.qodef-banner-link {
+    position: absolute;
+    display : block;
+    width   : 100%;
+    height  : 100%;
+    top     : 0;
+    left    : 0;
+    z-index : 20;
+}

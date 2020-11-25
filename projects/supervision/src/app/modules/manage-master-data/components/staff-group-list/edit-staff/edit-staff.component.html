@@ -1,0 +1,18 @@
+<!-- <p>edit-staff works!</p> -->
+<form [formGroup]="regConfig" (ngSubmit)="onSubmitDialog()">
+    <h1 mat-dialog-title>{{"Edit Staff"}}</h1>
+    <div mat-dialog-content class="example-container">
+        <mat-form-field>
+            <mat-label>Branch Name</mat-label>
+            <input matInput type="text" formControlName="staffName" placeholder="" cdkFocusInitial>
+            <mat-error *ngIf="hasError('staffName', 'required')"> <small> This field is required* </small> </mat-error>
+            <mat-error *ngIf="hasError('staffName', 'maxlength')"> <small> Maximum characters exceeded* </small>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="pb-5" mat-dialog-actions>
+        <span class="btn btn-sm btn-danger" (click)="onCloseDialog()"> Cancel </span>
+        &nbsp; &nbsp;
+        <button class="btn btn-sm btn-success" [disabled]="regConfig.invalid">Save</button>
+    </div>
+</form>

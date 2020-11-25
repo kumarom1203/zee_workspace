@@ -1,0 +1,77 @@
+<!-- <p>category works!</p> -->
+<div class="clearfix"></div>
+<div class="category">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-md-6 pad5">
+                <div class="qodef-banner-image">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-1-650x349.jpg"> -->
+                    <img [src]="getUrl(googleCatagories[0])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-1-650x349.jpg'" alt="">
+                    <div class="qodef-banner-text-holder">
+                        <div class="qodef-banner-text-outer">
+                            <div class="qodef-banner-text-inner">
+                                <h1 class="qodef-banner-title">
+                                    <!-- Food &amp; Drink -->
+                                    {{googleCatagories[0]?.name || 'Food &amp; Drink' }}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <a itemprop="url" class="qodef-banner-link"></a>
+                </div>
+            </div>
+            <div class="col-md-6 pad5">
+                <div class="qodef-banner-image">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-2-650x349.jpg"> -->
+                    <img [src]="getUrl(googleCatagories[1])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-2-650x349.jpg'" alt="">
+                    <div class="qodef-banner-text-holder">
+                        <div class="qodef-banner-text-outer">
+                            <div class="qodef-banner-text-inner">
+                                <h1 class="qodef-banner-title">
+                                    <!-- Explore -->
+                                    {{googleCatagories[1]?.name || 'Explore' }}
+
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <a itemprop="url" class="qodef-banner-link"></a>
+                </div>
+            </div>
+            <div class="col-md-6 pad5">
+                <div class="qodef-banner-image">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-3-650x349.jpg"> -->
+                    <img [src]="getUrl(googleCatagories[2])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-3-650x349.jpg'" alt="">
+                    <div class="qodef-banner-text-holder">
+                        <div class="qodef-banner-text-outer">
+                            <div class="qodef-banner-text-inner">
+                                <h1 class="qodef-banner-title">
+                                    <!-- Culture -->
+                                    {{googleCatagories[2]?.name || 'Culture' }}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <a itemprop="url" class="qodef-banner-link"></a>
+                </div>
+            </div>
+            <div class="col-md-6 pad5">
+                <div class="qodef-banner-image">
+                    <!-- <img src="https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-4-650x349.jpg"> -->
+                    <img [src]="getUrl(googleCatagories[3])" onError="this.src='https://iver.qodeinteractive.com/wp-content/uploads/2018/04/h1-banner-img-4-650x349.jpg'" alt="">
+                    <div class="qodef-banner-text-holder">
+                        <div class="qodef-banner-text-outer">
+                            <div class="qodef-banner-text-inner">
+                                <h1 class="qodef-banner-title">
+                                    <!-- BAR & NIGHTLIFE -->
+                                    {{googleCatagories[3]?.name || 'BAR & NIGHTLIFE' }}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <a itemprop="url" class="qodef-banner-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

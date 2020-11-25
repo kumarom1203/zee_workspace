@@ -1,0 +1,41 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 07/04/2020 05:26
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../icons_font/Flaticon.eot");
+  src: url("../icons_font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../icons_font/Flaticon.woff2") format("woff2"),
+       url("../icons_font/Flaticon.woff") format("woff"),
+       url("../icons_font/Flaticon.ttf") format("truetype"),
+       url("../icons_font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../icons_font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 17px;
+font-style: normal;
+margin-left: 0px;
+}
+
+.flaticon-garage:before { content: "\f100"; }
+.flaticon-wifi-signal:before { content: "\f101"; }
+.flaticon-swimming-pool:before { content: "\f102"; }
+.flaticon-hotel:before { content: "\f103"; }
+.flaticon-fan:before { content: "\f104"; }
+.flaticon-barbell:before { content: "\f105"; }
+.flaticon-bath-tub:before { content: "\f106"; }
+.flaticon-non-smoking-area:before { content: "\f107"; }
+.flaticon-room-service:before { content: "\f108"; }
